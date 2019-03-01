@@ -25,3 +25,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    compileSdkVer = 28
+    targetSdkVer = 28
+    minSdkVer = 19
+    supportLibVer = '28.0.0'
+    rxJavaVer = '2.2.7'
+    constraintLayoutVer = '1.1.3'
+}

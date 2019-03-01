@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RxJavaTutorial</string>
+    <string name="item_basic_usage">Basic Usage</string>
 </resources>
