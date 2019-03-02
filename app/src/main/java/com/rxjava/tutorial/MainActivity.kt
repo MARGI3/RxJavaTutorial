@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.rxjava.tutorial.basic_usage.BasicUsageDemo
+import com.rxjava.tutorial.basic_usage.BasicUsageDemo2
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun buildList(): List<ItemModel> {
         mModelList = arrayListOf()
         mModelList.add(ItemModel(R.string.item_basic_usage, BasicUsageDemo::class.java))
-
+        mModelList.add(ItemModel(R.string.item_basic_usage, BasicUsageDemo2::class.java))
         return mModelList
     }
 }
