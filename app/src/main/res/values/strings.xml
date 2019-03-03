@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RxJavaTutorial</string>
     <string name="item_basic_usage">Basic Usage</string>
+    <string name="item_basic_usage2">Basic Usage 2</string>
+    <string name="item_thread_scheduler">Thread Scheduler</string>
+    <string name="item_thread_scheduler2">Thread Scheduler 2</string>
 </resources>

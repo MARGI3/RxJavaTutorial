@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.basic_usage
+package com.rxjava.tutorial.p1_basic_usage
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
