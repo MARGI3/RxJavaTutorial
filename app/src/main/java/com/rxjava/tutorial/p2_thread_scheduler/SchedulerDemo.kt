@@ -43,5 +43,10 @@ class SchedulerDemo : ItemRunnable() {
          * subscribeOn() 指定上游事件发送线程
          * observeOn() 指定下游接收事件的线程
          */
+
+        //SchedulerDemo: Observable thread is : RxNewThreadScheduler-1
+        //SchedulerDemo: emit 1
+        //SchedulerDemo: Observable thread is : main
+        //SchedulerDemo: onNext: 1
     }
 }

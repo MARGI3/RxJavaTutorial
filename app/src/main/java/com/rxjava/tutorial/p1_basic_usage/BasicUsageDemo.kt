@@ -3,6 +3,7 @@ package com.rxjava.tutorial.p1_basic_usage
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
 import io.reactivex.Observable
+import io.reactivex.ObservableEmitter
 import io.reactivex.ObservableOnSubscribe
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
@@ -45,6 +46,7 @@ class BasicUsageDemo : ItemRunnable() {
 //        observable.subscribe(observer)
 //    }
 
+    @Suppress("ObjectLiteralToLambda")
     override fun run() {
 
         /**
@@ -54,7 +56,7 @@ class BasicUsageDemo : ItemRunnable() {
 
 
         //链式调用
-        Observable.create(ObservableOnSubscribe<Int> {
+        Observable.create(object : ObservableOnSubscribe<Int> {
 
             /**
              * ObservableEmitter  onNext() onComplete() onError()
@@ -81,13 +83,14 @@ class BasicUsageDemo : ItemRunnable() {
             /**
              * onError() onComplete() 是上游决定数据流是否结束的方法
              */
-
-            it.onNext(4)
-            it.onNext(5)
-            it.onNext(6)
-            it.onComplete()
-            it.onNext(7)
-            it.onNext(8)
+            override fun subscribe(emitter: ObservableEmitter<Int>) {
+                emitter.onNext(4)
+                emitter.onNext(5)
+                emitter.onNext(6)
+                emitter.onComplete()
+                emitter.onNext(7)
+                emitter.onNext(8)
+            }
 
         }).subscribe(object : Observer<Int> {
 

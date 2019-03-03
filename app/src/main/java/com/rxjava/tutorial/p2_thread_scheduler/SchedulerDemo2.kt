@@ -16,7 +16,7 @@ import io.reactivex.schedulers.Schedulers
 class SchedulerDemo2 : ItemRunnable() {
 
     companion object {
-        private const val TAG = "SchedulerDemo"
+        private const val TAG = "SchedulerDemo2"
     }
 
     override fun run() {
@@ -60,5 +60,14 @@ class SchedulerDemo2 : ItemRunnable() {
          *
          * 多次指定下游的线程是可以的, 也就是说每调用一次observeOn() , 下游的线程就会切换一次
          */
+
+
+        //SchedulerDemo: Observable thread is : RxNewThreadScheduler-4
+        //SchedulerDemo: emit 1
+        //SchedulerDemo: doOnNext After mainThread : main
+        //SchedulerDemo: doOnNext After io : RxCachedThreadScheduler-3
+        //SchedulerDemo: Observable thread is : main
+        //SchedulerDemo: onNext: 1
+
     }
 }

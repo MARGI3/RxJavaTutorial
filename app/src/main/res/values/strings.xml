@@ -4,4 +4,6 @@
     <string name="item_basic_usage2">Basic Usage 2</string>
     <string name="item_thread_scheduler">Thread Scheduler</string>
     <string name="item_thread_scheduler2">Thread Scheduler 2</string>
+    <string name="item_map_usage_1">Map Usage</string>
+    <string name="item_flat_map_usage">FlatMap Usage</string>
 </resources>
