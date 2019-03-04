@@ -9,6 +9,7 @@ import io.reactivex.ObservableSource
 import io.reactivex.functions.Consumer
 import io.reactivex.functions.Function
 import java.util.concurrent.TimeUnit
+import kotlin.random.Random
 
 /**
  * author : magic
@@ -41,11 +42,17 @@ class FlatMapDemo : ItemRunnable() {
                     Log.d(TAG, "add $i")
                     list.add("flat map event $t")
                 }
-                return Observable.fromIterable(list)
+
+                //模拟 FlatMap 不能保证发送顺序的场景
+                val delayTime = Random(2).nextLong(30)
+                return Observable.fromIterable(list).delay(delayTime, TimeUnit.MILLISECONDS)
             }
 
         }).subscribe(object : Consumer<String> {
 
+            /**
+             * 注意Android Logd 机制的 chatty 问题，避免log 数据不对
+             */
             override fun accept(t: String?) {
                 Log.d(TAG, "onNext accept : $t")
             }
@@ -53,10 +60,44 @@ class FlatMapDemo : ItemRunnable() {
         })
 
         /**
+         * Map vs FlatMap
+         *
+         * 1.
          * Map 1:1 的事件转换
-         * FlatMap 1:N 的事件转换, N;N 的事件转换
+         * FlatMap 1:1 的事件转换 1:N 的事件转换, N:N 的事件转换
          *         （并且FlatMap不保证事件的顺序）
+         *
+         * 2.
+         * Map Function<Input, Output>
+         * FlatMap Function<Input, ObservableSource<Output>>
+         * Map 转换数据类型, 返回输出类型
+         * FlatMap 转换之后返回的是  ObservableSource<Output>, ObservableSource 还可以支持其他后续的操作
          */
+
+        //FlatMapDemo: add 0
+        //FlatMapDemo: add 1
+        //FlatMapDemo: add 2
+        //FlatMapDemo: add 3
+        //FlatMapDemo: add 0
+        //FlatMapDemo: add 1
+        //FlatMapDemo: add 2
+        //FlatMapDemo: add 3
+        //FlatMapDemo: add 0
+        //FlatMapDemo: add 1
+        //FlatMapDemo: add 2
+        //FlatMapDemo: add 3
+        //FlatMapDemo: onNext accept : flat map event 1
+        //FlatMapDemo: onNext accept : flat map event 1
+        //FlatMapDemo: onNext accept : flat map event 1
+        //FlatMapDemo: onNext accept : flat map event 1
+        //FlatMapDemo: onNext accept : flat map event 2
+        //FlatMapDemo: onNext accept : flat map event 2
+        //FlatMapDemo: onNext accept : flat map event 2
+        //FlatMapDemo: onNext accept : flat map event 2
+        //FlatMapDemo: onNext accept : flat map event 3
+        //FlatMapDemo: onNext accept : flat map event 3
+        //FlatMapDemo: onNext accept : flat map event 3
+        //FlatMapDemo: onNext accept : flat map event 3
     }
 
 }

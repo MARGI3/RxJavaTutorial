@@ -9,7 +9,7 @@ class ItemActivity : AppCompatActivity() {
 
     companion object {
 
-        private val KEY_EXTRA = "key.extra"
+        private const val KEY_EXTRA = "key.extra"
 
         fun createIntent(context: Context, clazz: Class<out ItemRunnable>): Intent {
             val intent = Intent(context, ItemActivity::class.java)

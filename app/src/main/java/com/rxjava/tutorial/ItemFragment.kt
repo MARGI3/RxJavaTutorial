@@ -15,8 +15,8 @@ class ItemFragment: Fragment(), View.OnClickListener {
 
     companion object {
 
-        private val KEY_DESC = "argument.desc"
-        private val KEY_EXECUTOR = "argument.executor"
+        private const val KEY_DESC = "argument.desc"
+        private const val KEY_EXECUTOR = "argument.executor"
 
         @JvmStatic
         fun newInstance(@StringRes descRes: Int, clazz: Class<ItemRunnable>) : ItemFragment {
