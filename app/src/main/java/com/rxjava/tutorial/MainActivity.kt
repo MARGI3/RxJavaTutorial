@@ -9,8 +9,10 @@ import com.rxjava.tutorial.p1_basic_usage.BasicUsageDemo
 import com.rxjava.tutorial.p1_basic_usage.BasicUsageDemo2
 import com.rxjava.tutorial.p2_thread_scheduler.SchedulerDemo
 import com.rxjava.tutorial.p2_thread_scheduler.SchedulerDemo2
+import com.rxjava.tutorial.p3_map_function.ConcatMapDemo
 import com.rxjava.tutorial.p3_map_function.FlatMapDemo
 import com.rxjava.tutorial.p3_map_function.MapDemo
+import com.rxjava.tutorial.p4_zip_function.ZipOperatorDemo
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_thread_scheduler2, SchedulerDemo2::class.java))
         mModelList.add(ItemModel(R.string.item_map_usage_1, MapDemo::class.java))
         mModelList.add(ItemModel(R.string.item_flat_map_usage, FlatMapDemo::class.java))
+        mModelList.add(ItemModel(R.string.item_concat_map_usage, ConcatMapDemo::class.java))
+        mModelList.add(ItemModel(R.string.item_zip_operator_usage, ZipOperatorDemo::class.java))
         return mModelList
     }
 }

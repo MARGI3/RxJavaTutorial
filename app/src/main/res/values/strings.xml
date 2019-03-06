@@ -6,4 +6,6 @@
     <string name="item_thread_scheduler2">Thread Scheduler 2</string>
     <string name="item_map_usage_1">Map Usage</string>
     <string name="item_flat_map_usage">FlatMap Usage</string>
+    <string name="item_concat_map_usage">ConcatMap Usage</string>
+    <string name="item_zip_operator_usage">Zip Operator Usage</string>
 </resources>

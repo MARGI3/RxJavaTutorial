@@ -34,10 +34,10 @@ class ListAdapter(list: List<ItemModel>) : RecyclerView.Adapter<ListAdapter.Item
 
         fun bind(model: ItemModel) {
             mText.setText(model.mTitle)
-            mText.setOnClickListener(View.OnClickListener {
-                val context = mText.context
+            mText.setOnClickListener {
+                val context = it.context
                 context.startActivity(ItemActivity.createIntent(context, model.mClazz))
-            })
+            }
         }
     }
 }
