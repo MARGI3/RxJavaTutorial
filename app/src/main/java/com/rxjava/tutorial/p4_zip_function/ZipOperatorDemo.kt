@@ -41,6 +41,7 @@ class ZipOperatorDemo : ItemRunnable() {
                 Log.d(TAG, "${Thread.currentThread().name} * emit complete1")
                 emitter.onComplete()
             }
+
         }).subscribeOn(IoScheduler())
 
         val observable2 = Observable.create(object : ObservableOnSubscribe<String> {
@@ -51,11 +52,19 @@ class ZipOperatorDemo : ItemRunnable() {
                 Thread.sleep(1000)
                 Log.d(TAG, "${Thread.currentThread().name} : emit B")
                 emitter.onNext("B")
+
+                //如果当前任务出现异常
+                // 1. 则当前 observable2 后续事件丢失
+                // 2. zip observable3 后续 zip 事件无法完成 直接收到 onError() 回调
+                // 3. observable1 后续事件正常发送 不受影响
+//                throw Exception()
+
                 Log.d(TAG, "${Thread.currentThread().name} : emit C")
                 emitter.onNext("C")
                 Log.d(TAG, "${Thread.currentThread().name} : emit complete2")
                 emitter.onComplete()
             }
+
         }).subscribeOn(IoScheduler())
 
         val observable3 = Observable.zip(observable1, observable2, object : BiFunction<Int, String, String> {
@@ -82,7 +91,7 @@ class ZipOperatorDemo : ItemRunnable() {
             }
 
             override fun onError(e: Throwable) {
-                Log.d(TAG, "operate onError $e")
+                Log.e(TAG, "operate onError $e")
             }
         })
 
