@@ -10,10 +10,6 @@ import io.reactivex.disposables.Disposable
 
 class BasicUsageDemo : ItemRunnable() {
 
-    companion object {
-        private const val TAG = "BasicUsageDemo"
-    }
-
 //    override fun run() {
 //
 //        val observable = Observable.create(ObservableOnSubscribe<Int> {

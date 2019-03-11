@@ -15,10 +15,6 @@ import io.reactivex.schedulers.Schedulers
  */
 class SchedulerDemo2 : ItemRunnable() {
 
-    companion object {
-        private const val TAG = "SchedulerDemo2"
-    }
-
     override fun run() {
         super.run()
         val observable = Observable.create(ObservableOnSubscribe<Int> {
@@ -62,12 +58,12 @@ class SchedulerDemo2 : ItemRunnable() {
          */
 
 
-        //SchedulerDemo: Observable thread is : RxNewThreadScheduler-4
-        //SchedulerDemo: emit 1
-        //SchedulerDemo: doOnNext After mainThread : main
-        //SchedulerDemo: doOnNext After io : RxCachedThreadScheduler-3
-        //SchedulerDemo: Observable thread is : main
-        //SchedulerDemo: onNext: 1
+        //RxJavaTutorial: Observable thread is : RxNewThreadScheduler-4
+        //RxJavaTutorial: emit 1
+        //RxJavaTutorial: doOnNext After mainThread : main
+        //RxJavaTutorial: doOnNext After io : RxCachedThreadScheduler-3
+        //RxJavaTutorial: Observable thread is : main
+        //RxJavaTutorial: onNext: 1
 
     }
 }

@@ -18,10 +18,6 @@ import kotlin.random.Random
  */
 class ConcatMapDemo : ItemRunnable() {
 
-    companion object {
-        private const val TAG = "ConcatMapDemo"
-    }
-
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
         super.run()
@@ -78,30 +74,30 @@ class ConcatMapDemo : ItemRunnable() {
          * ConcatMap 转换之后返回的是  ObservableSource<Output>, ObservableSource 还可以支持其他后续的操作
          */
 
-        //ConcatMapDemo: add 0
-        //ConcatMapDemo: add 1
-        //ConcatMapDemo: add 2
-        //ConcatMapDemo: add 3
-        //ConcatMapDemo: onNext accept : flat map event 1
-        //ConcatMapDemo: onNext accept : flat map event 1
-        //ConcatMapDemo: onNext accept : flat map event 1
-        //ConcatMapDemo: onNext accept : flat map event 1
-        //ConcatMapDemo: add 0
-        //ConcatMapDemo: add 1
-        //ConcatMapDemo: add 2
-        //ConcatMapDemo: add 3
-        //ConcatMapDemo: onNext accept : flat map event 2
-        //ConcatMapDemo: onNext accept : flat map event 2
-        //ConcatMapDemo: onNext accept : flat map event 2
-        //ConcatMapDemo: onNext accept : flat map event 2
-        //ConcatMapDemo: add 0
-        //ConcatMapDemo: add 1
-        //ConcatMapDemo: add 2
-        //ConcatMapDemo: add 3
-        //ConcatMapDemo: onNext accept : flat map event 3
-        //ConcatMapDemo: onNext accept : flat map event 3
-        //ConcatMapDemo: onNext accept : flat map event 3
-        //ConcatMapDemo: onNext accept : flat map event 3
+        //RxJavaTutorial: add 0
+        //RxJavaTutorial: add 1
+        //RxJavaTutorial: add 2
+        //RxJavaTutorial: add 3
+        //RxJavaTutorial: onNext accept : flat map event 1
+        //RxJavaTutorial: onNext accept : flat map event 1
+        //RxJavaTutorial: onNext accept : flat map event 1
+        //RxJavaTutorial: onNext accept : flat map event 1
+        //RxJavaTutorial: add 0
+        //RxJavaTutorial: add 1
+        //RxJavaTutorial: add 2
+        //RxJavaTutorial: add 3
+        //RxJavaTutorial: onNext accept : flat map event 2
+        //RxJavaTutorial: onNext accept : flat map event 2
+        //RxJavaTutorial: onNext accept : flat map event 2
+        //RxJavaTutorial: onNext accept : flat map event 2
+        //RxJavaTutorial: add 0
+        //RxJavaTutorial: add 1
+        //RxJavaTutorial: add 2
+        //RxJavaTutorial: add 3
+        //RxJavaTutorial: onNext accept : flat map event 3
+        //RxJavaTutorial: onNext accept : flat map event 3
+        //RxJavaTutorial: onNext accept : flat map event 3
+        //RxJavaTutorial: onNext accept : flat map event 3
     }
 
 }

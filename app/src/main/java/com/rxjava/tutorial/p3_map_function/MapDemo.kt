@@ -15,10 +15,6 @@ import io.reactivex.functions.Function
  */
 class MapDemo : ItemRunnable() {
 
-    companion object {
-        private const val TAG = "MapDemo"
-    }
-
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
         super.run()
@@ -47,12 +43,12 @@ class MapDemo : ItemRunnable() {
 
         })
 
-        //MapDemo: map  input 1, output No - 1
-        //MapDemo: onNext No - 1
-        //MapDemo: map  input 2, output No - 2
-        //MapDemo: onNext No - 2
-        //MapDemo: map  input 3, output No - 3
-        //MapDemo: onNext No - 3
+        //RxJavaTutorial: map  input 1, output No - 1
+        //RxJavaTutorial: onNext No - 1
+        //RxJavaTutorial: map  input 2, output No - 2
+        //RxJavaTutorial: onNext No - 2
+        //RxJavaTutorial: map  input 3, output No - 3
+        //RxJavaTutorial: onNext No - 3
 
     }
 }

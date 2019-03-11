@@ -15,10 +15,6 @@ import io.reactivex.schedulers.Schedulers
  */
 class SchedulerDemo : ItemRunnable() {
 
-    companion object {
-        private const val TAG = "SchedulerDemo"
-    }
-
     override fun run() {
         super.run()
         val observable = Observable.create(ObservableOnSubscribe<Int> {
@@ -44,9 +40,9 @@ class SchedulerDemo : ItemRunnable() {
          * observeOn() 指定下游接收事件的线程
          */
 
-        //SchedulerDemo: Observable thread is : RxNewThreadScheduler-1
-        //SchedulerDemo: emit 1
-        //SchedulerDemo: Observable thread is : main
-        //SchedulerDemo: onNext: 1
+        //RxJavaTutorial: Observable thread is : RxNewThreadScheduler-1
+        //RxJavaTutorial: emit 1
+        //RxJavaTutorial: Observable thread is : main
+        //RxJavaTutorial: onNext: 1
     }
 }

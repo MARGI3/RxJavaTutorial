@@ -14,10 +14,6 @@ import io.reactivex.functions.Consumer
  */
 class BasicUsageDemo2 : ItemRunnable() {
 
-    companion object {
-        private const val TAG = "BasicUsageDemo2"
-    }
-
     override fun run() {
 
         /**
