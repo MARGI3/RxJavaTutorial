@@ -14,7 +14,7 @@ import io.reactivex.ObservableOnSubscribe
 /**
  * 需求场景 完整的创建被观察者对象
  */
-class Demo1Create : ItemRunnable() {
+class Demo1_Create : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {

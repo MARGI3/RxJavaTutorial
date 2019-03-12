@@ -1,6 +1,6 @@
 RxJava 2 Tutorial 
 
-Thanks for [ssseasonnn](https://github.com/ssseasonnn/RxJava2Demo)
+Thanks for [Carson-Ho](https://github.com/Carson-Ho/RxJavaLearningMaterial)
 
 
 

@@ -21,7 +21,7 @@ import io.reactivex.disposables.Disposable
  * 快速创建 被观察者对象（Observable） & 发送10个以上事件（数组形式）
  * 数组元素遍历
  */
-class Demo4FromArray : ItemRunnable() {
+class Demo4_FromArray : ItemRunnable() {
 
     override fun run() {
         super.run()
@@ -42,7 +42,7 @@ class Demo4FromArray : ItemRunnable() {
             }
 
             override fun onNext(t: Int) {
-                Log.d(TAG, "receive event")
+                Log.d(TAG, "receive event $t")
             }
 
             override fun onComplete() {
@@ -50,7 +50,7 @@ class Demo4FromArray : ItemRunnable() {
             }
 
             override fun onError(e: Throwable) {
-                Log.d(TAG, "handle error")
+                Log.d(TAG, "handle error ${e.message}")
             }
         })
 

@@ -8,8 +8,8 @@ import io.reactivex.ObservableOnSubscribe
 import io.reactivex.ObservableSource
 import io.reactivex.functions.Consumer
 import io.reactivex.functions.Function
+import java.util.*
 import java.util.concurrent.TimeUnit
-import kotlin.random.Random
 
 /**
  * author : magic
@@ -40,7 +40,7 @@ class ConcatMapDemo : ItemRunnable() {
                 }
 
                 //模拟 FlatMap 不能保证发送顺序的场景
-                val delayTime = Random(2).nextLong(30)
+                val delayTime = Random(2).nextLong()
                 return Observable.fromIterable(list).delay(delayTime, TimeUnit.MILLISECONDS)
             }
 
