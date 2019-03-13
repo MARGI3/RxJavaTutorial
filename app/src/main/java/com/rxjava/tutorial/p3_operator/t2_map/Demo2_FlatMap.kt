@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_map_function
+package com.rxjava.tutorial.p3_operator.t2_map
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -16,7 +16,7 @@ import kotlin.random.Random
  * date   : 03/03/2019
  * mail   : 562224864cross@gmail.com
  */
-class FlatMapDemo : ItemRunnable() {
+class Demo2_FlatMap : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
@@ -39,9 +39,7 @@ class FlatMapDemo : ItemRunnable() {
                     list.add("flat map event $t")
                 }
 
-                //模拟 FlatMap 不能保证发送顺序的场景
-                val delayTime = Random(2).nextLong(30)
-                return Observable.fromIterable(list).delay(delayTime, TimeUnit.MILLISECONDS)
+                return Observable.fromIterable(list)
             }
 
         }).subscribe(object : Consumer<String> {
@@ -54,21 +52,6 @@ class FlatMapDemo : ItemRunnable() {
             }
 
         })
-
-        /**
-         * Map vs FlatMap
-         *
-         * 1.
-         * Map 1:1 的事件转换
-         * FlatMap 1:1 的事件转换 1:N 的事件转换, N:N 的事件转换
-         *         （并且FlatMap不保证事件的顺序）
-         *
-         * 2.
-         * Map Function<Input, Output>
-         * FlatMap Function<Input, ObservableSource<Output>>
-         * Map 转换数据类型, 返回输出类型
-         * FlatMap 转换之后返回的是  ObservableSource<Output>, ObservableSource 还可以支持其他后续的操作
-         */
 
         //RxJavaTutorial: add 0
         //RxJavaTutorial: add 1

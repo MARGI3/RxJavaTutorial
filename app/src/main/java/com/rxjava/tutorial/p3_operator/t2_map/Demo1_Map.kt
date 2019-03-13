@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_map_function
+package com.rxjava.tutorial.p3_operator.t2_map
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -13,7 +13,7 @@ import io.reactivex.functions.Function
  * date   : 03/03/2019
  * mail   : 562224864cross@gmail.com
  */
-class MapDemo : ItemRunnable() {
+class Demo1_Map : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {

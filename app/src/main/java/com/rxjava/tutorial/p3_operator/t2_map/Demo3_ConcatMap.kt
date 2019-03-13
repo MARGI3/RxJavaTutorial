@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_map_function
+package com.rxjava.tutorial.p3_operator.t2_map
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit
  * date   : 03/03/2019
  * mail   : 562224864cross@gmail.com
  */
-class ConcatMapDemo : ItemRunnable() {
+class Demo3_ConcatMap : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
@@ -54,25 +54,6 @@ class ConcatMapDemo : ItemRunnable() {
             }
 
         })
-
-        /**
-         * Map vs FlatMap vs ConcatMap
-         *
-         * 1.
-         * Map 1:1 的事件转换
-         * FlatMap 1:1 的事件转换 1:N 的事件转换, N:N 的事件转换  （并且FlatMap不保证事件的顺序）
-         * ConcatMap  1:1 的事件转换 1:N 的事件转换, N:N 的事件转换  (保证事件的顺序)
-         *
-         *
-         * 2.
-         * Map Function<Input, Output>
-         * FlatMap Function<Input, ObservableSource<Output>>
-         * ConcatMap Function<Input, ObservableSource<Output>>
-         *
-         * Map 转换数据类型, 返回输出类型
-         * FlatMap 转换之后返回的是  ObservableSource<Output>, ObservableSource 还可以支持其他后续的操作
-         * ConcatMap 转换之后返回的是  ObservableSource<Output>, ObservableSource 还可以支持其他后续的操作
-         */
 
         //RxJavaTutorial: add 0
         //RxJavaTutorial: add 1

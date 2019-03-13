@@ -4,8 +4,22 @@
     <string name="item_basic_usage2">Basic Usage 2</string>
     <string name="item_thread_scheduler">Thread Scheduler</string>
     <string name="item_thread_scheduler2">Thread Scheduler 2</string>
-    <string name="item_map_usage_1">Map Usage</string>
-    <string name="item_flat_map_usage">FlatMap Usage</string>
-    <string name="item_concat_map_usage">ConcatMap Usage</string>
+
+    <string name="item_create_demo_1">Create Operator</string>
+    <string name="item_create_demo_2">Create Operator 2</string>
+    <string name="item_create_just">Just Operator</string>
+    <string name="item_create_from_array">FromArray Operator</string>
+    <string name="item_create_from_iterable">FromIterable Operator</string>
+    <string name="item_create_special_create">Special Create Operator</string>
+    <string name="item_create_defer">Defer Operator</string>
+    <string name="item_create_timer">Timer Operator</string>
+    <string name="item_create_interval">Interval Operator</string>
+    <string name="item_create_interval_range">IntervalRange Operator</string>
+    <string name="item_create_range">Range Operator</string>
+    <string name="item_create_range_long">RangeLong Operator</string>
+
+    <string name="item_map_demo1">Map Usage</string>
+    <string name="item_map_flat_map">FlatMap Usage</string>
+    <string name="item_map_concat_map">ConcatMap Usage</string>
     <string name="item_zip_operator_usage">Zip Operator Usage</string>
 </resources>

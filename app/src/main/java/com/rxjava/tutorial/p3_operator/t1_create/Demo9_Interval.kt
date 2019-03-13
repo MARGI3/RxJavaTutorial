@@ -36,7 +36,7 @@ class Demo9_Interval : ItemRunnable() {
          * 参数2 = 间隔时间数字；
          * 参数3 = 时间单位；
          */
-        Observable.interval(3,1,TimeUnit.SECONDS)
+        Observable.interval(3, 1, TimeUnit.SECONDS)
                 .subscribe(object : Observer<Long> {
 
                     override fun onSubscribe(d: Disposable) {
