@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator.t2_map
+package com.rxjava.tutorial.p3_operator.t2_change
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -12,6 +12,12 @@ import io.reactivex.functions.Function
  * author : magic
  * date   : 03/03/2019
  * mail   : 562224864cross@gmail.com
+ */
+
+/**
+ * 对 Observable 发送的每一个事件 通过指定函数 处理 转换成 "另外一种"(新的对象，可以是同一个类型) 事件
+ *
+ * 将 Observable 发送的事件转换为任意的类型事件
  */
 class Demo1_Map : ItemRunnable() {
 

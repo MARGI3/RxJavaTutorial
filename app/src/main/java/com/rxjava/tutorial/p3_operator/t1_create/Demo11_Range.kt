@@ -37,11 +37,11 @@ class Demo11_Range : ItemRunnable() {
         observable.subscribe(object : Observer<Int> {
 
             override fun onSubscribe(d: Disposable) {
-                Log.d(TAG, "start subscribe time - ${System.currentTimeMillis()}")
+                Log.d(TAG, "start subscribe time - ${System.currentTimeMillis() / 1000}")
             }
 
             override fun onNext(t: Int) {
-                Log.d(TAG, "receive event $t time - ${System.currentTimeMillis()}")
+                Log.d(TAG, "receive event $t time - ${System.currentTimeMillis() / 1000}")
             }
 
             override fun onComplete() {

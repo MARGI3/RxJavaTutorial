@@ -61,7 +61,7 @@ class Demo6_SpeicalCreate : ItemRunnable() {
             }
 
             override fun onError(e: Throwable) {
-                Log.d(TAG, "handle error ${e.message}")
+                Log.d(TAG, "handle error $e")
             }
         })
 

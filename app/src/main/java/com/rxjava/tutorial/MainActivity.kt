@@ -1,21 +1,19 @@
 package com.rxjava.tutorial
 
-import android.graphics.Canvas
-import android.graphics.Rect
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.view.View
 import com.rxjava.tutorial.p1_basic_usage.BasicUsageDemo
 import com.rxjava.tutorial.p1_basic_usage.BasicUsageDemo2
 import com.rxjava.tutorial.p2_thread_scheduler.SchedulerDemo
 import com.rxjava.tutorial.p2_thread_scheduler.SchedulerDemo2
 import com.rxjava.tutorial.p3_operator.t1_create.*
-import com.rxjava.tutorial.p3_operator.t2_map.Demo1_Map
-import com.rxjava.tutorial.p3_operator.t2_map.Demo2_FlatMap
-import com.rxjava.tutorial.p3_operator.t2_map.Demo3_ConcatMap
+import com.rxjava.tutorial.p3_operator.t2_change.Demo1_Map
+import com.rxjava.tutorial.p3_operator.t2_change.Demo2_FlatMap
+import com.rxjava.tutorial.p3_operator.t2_change.Demo3_ConcatMap
+import com.rxjava.tutorial.p3_operator.t2_change.Demo4_Buffer
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun buildList(): List<ItemModel> {
         mModelList = arrayListOf()
+
         mModelList.add(ItemModel(R.string.item_basic_usage, BasicUsageDemo::class.java))
         mModelList.add(ItemModel(R.string.item_basic_usage2, BasicUsageDemo2::class.java))
         mModelList.add(ItemModel(R.string.item_thread_scheduler, SchedulerDemo::class.java))
@@ -56,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_map_demo1, Demo1_Map::class.java))
         mModelList.add(ItemModel(R.string.item_map_flat_map, Demo2_FlatMap::class.java))
         mModelList.add(ItemModel(R.string.item_map_concat_map, Demo3_ConcatMap::class.java))
+        mModelList.add(ItemModel(R.string.item_buffer, Demo4_Buffer::class.java))
 
         return mModelList
     }

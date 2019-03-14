@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator.t2_map
+package com.rxjava.tutorial.p3_operator.t2_change
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -16,6 +16,16 @@ import java.util.concurrent.TimeUnit
  * date   : 03/03/2019
  * mail   : 562224864cross@gmail.com
  */
+
+/**
+ *
+ * 作用：类似FlatMap（）操作符
+ *
+ * 与FlatMap（）的 区别在于：拆分 & 重新合并生成的事件序列 的顺序 = 被观察者旧序列生产的顺序
+ *
+ * 有序的将被观察者发送的整个事件序列进行变换
+ */
+
 class Demo3_ConcatMap : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")

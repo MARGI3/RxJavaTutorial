@@ -39,12 +39,18 @@ class Demo9_Interval : ItemRunnable() {
         Observable.interval(3, 1, TimeUnit.SECONDS)
                 .subscribe(object : Observer<Long> {
 
+                    private lateinit var disposable: Disposable
+
                     override fun onSubscribe(d: Disposable) {
-                        Log.d(TAG, "start subscribe time - ${System.currentTimeMillis()}")
+                        disposable = d
+                        Log.d(TAG, "start subscribe time - ${System.currentTimeMillis() / 1000}")
                     }
 
                     override fun onNext(t: Long) {
-                        Log.d(TAG, "receive event $t time - ${System.currentTimeMillis()}")
+                        if (t > 10) {
+                            disposable.dispose()
+                        }
+                        Log.d(TAG, "receive event $t time - ${System.currentTimeMillis() / 1000}")
                     }
 
                     override fun onComplete() {

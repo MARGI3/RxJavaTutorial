@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator.t2_map
+package com.rxjava.tutorial.p3_operator.t2_change
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -8,13 +8,27 @@ import io.reactivex.ObservableOnSubscribe
 import io.reactivex.ObservableSource
 import io.reactivex.functions.Consumer
 import io.reactivex.functions.Function
-import java.util.concurrent.TimeUnit
-import kotlin.random.Random
 
 /**
  * author : magic
  * date   : 03/03/2019
  * mail   : 562224864cross@gmail.com
+ */
+
+/**
+ * 作用：将被观察者发送的事件序列进行 拆分 & 单独转换，再合并成一个新的事件序列，最后再进行发送
+ *
+ * 原理：
+ * 为事件序列中每个事件都创建一个 Observable 对象；
+ * 将对每个 原始事件 转换后的 新事件 都放入到对应 Observable对象；
+ * 将新建的每个Observable 都合并到一个 新建的、总的Observable 对象；
+ * 新建的、总的Observable 对象 将 新合并的事件序列 发送给观察者（Observer）
+ *
+ *
+ * 应用场景
+ *
+ * 无序的将被观察者发送的整个事件序列进行变换
+ *
  */
 class Demo2_FlatMap : ItemRunnable() {
 

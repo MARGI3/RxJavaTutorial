@@ -44,7 +44,7 @@ class Demo7_Defer : ItemRunnable() {
         //修改一次 eventValue的值
         eventValue = 5
 
-        // 注：此时，才会调用defer（）创建被观察者对象（Observable）
+        // 注：此时 subscribe()之后，才会调用defer() 创建被观察者对象（Observable）
         observable.subscribe(object : Observer<Int> {
 
             override fun onSubscribe(d: Disposable) {
