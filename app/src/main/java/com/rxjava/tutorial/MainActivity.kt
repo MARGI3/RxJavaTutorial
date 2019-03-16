@@ -10,10 +10,18 @@ import com.rxjava.tutorial.p1_basic_usage.BasicUsageDemo2
 import com.rxjava.tutorial.p2_thread_scheduler.SchedulerDemo
 import com.rxjava.tutorial.p2_thread_scheduler.SchedulerDemo2
 import com.rxjava.tutorial.p3_operator.t1_create.*
-import com.rxjava.tutorial.p3_operator.t2_change.Demo1_Map
-import com.rxjava.tutorial.p3_operator.t2_change.Demo2_FlatMap
-import com.rxjava.tutorial.p3_operator.t2_change.Demo3_ConcatMap
-import com.rxjava.tutorial.p3_operator.t2_change.Demo4_Buffer
+import com.rxjava.tutorial.p3_operator.t2_transform.Demo1_Map
+import com.rxjava.tutorial.p3_operator.t2_transform.Demo2_FlatMap
+import com.rxjava.tutorial.p3_operator.t2_transform.Demo3_ConcatMap
+import com.rxjava.tutorial.p3_operator.t2_transform.Demo4_Buffer
+import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo1_Concat
+import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo2_ConcatDelayError
+import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo3_Merge
+import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo4_MergeDelayError
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo5_Zip
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo6_CombineLatest
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo7_Reduce
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo8_Collect
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,11 +42,13 @@ class MainActivity : AppCompatActivity() {
     private fun buildList(): List<ItemModel> {
         mModelList = arrayListOf()
 
+        mModelList.add(ItemModel(R.string.item_title_basic, ItemRunnable::class.java))
         mModelList.add(ItemModel(R.string.item_basic_usage, BasicUsageDemo::class.java))
         mModelList.add(ItemModel(R.string.item_basic_usage2, BasicUsageDemo2::class.java))
         mModelList.add(ItemModel(R.string.item_thread_scheduler, SchedulerDemo::class.java))
         mModelList.add(ItemModel(R.string.item_thread_scheduler2, SchedulerDemo2::class.java))
 
+        mModelList.add(ItemModel(R.string.item_title_create, ItemRunnable::class.java))
         mModelList.add(ItemModel(R.string.item_create_demo_1, Demo1_Create::class.java))
         mModelList.add(ItemModel(R.string.item_create_demo_2, Demo2_Create::class.java))
         mModelList.add(ItemModel(R.string.item_create_just, Demo3_Just::class.java))
@@ -52,10 +62,21 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_create_range, Demo11_Range::class.java))
         mModelList.add(ItemModel(R.string.item_create_range_long, Demo12_RangeLong::class.java))
 
+        mModelList.add(ItemModel(R.string.item_title_transform, ItemRunnable::class.java))
         mModelList.add(ItemModel(R.string.item_map_demo1, Demo1_Map::class.java))
         mModelList.add(ItemModel(R.string.item_map_flat_map, Demo2_FlatMap::class.java))
         mModelList.add(ItemModel(R.string.item_map_concat_map, Demo3_ConcatMap::class.java))
         mModelList.add(ItemModel(R.string.item_buffer, Demo4_Buffer::class.java))
+
+        mModelList.add(ItemModel(R.string.item_title_combine, ItemRunnable::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_concat, Demo1_Concat::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_concat_delay_error, Demo2_ConcatDelayError::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_merge, Demo3_Merge::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_merge_delay_error, Demo4_MergeDelayError::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_zip, Demo5_Zip::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_combine_latest, Demo6_CombineLatest::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_reduce, Demo7_Reduce::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_collect, Demo8_Collect::class.java))
 
         return mModelList
     }

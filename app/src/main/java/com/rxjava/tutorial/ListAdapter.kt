@@ -1,5 +1,7 @@
 package com.rxjava.tutorial
 
+import android.graphics.Color
+import android.graphics.Typeface
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -33,11 +35,18 @@ class ListAdapter(list: List<ItemModel>) : RecyclerView.Adapter<ListAdapter.Item
         }
 
         fun bind(model: ItemModel) {
-            mText.setText(model.mTitle)
-            mText.setOnClickListener {
-                val context = it.context
-                context.startActivity(ItemActivity.createIntent(context, model.mClazz))
+            val name = model.mClazz.simpleName
+            if (ItemRunnable::class.java.simpleName == name) {
+                mText.setBackgroundColor(Color.GRAY)
+            } else {
+                mText.setBackgroundColor(Color.WHITE)
+                mText.setOnClickListener {
+                    val context = it.context
+                    context.startActivity(ItemActivity.createIntent(context, model.mClazz))
+                }
             }
+            mText.setText(model.mTitle)
+
         }
     }
 }

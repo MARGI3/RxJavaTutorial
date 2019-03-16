@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator.t2_change
+package com.rxjava.tutorial.p3_operator.t2_transform
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
@@ -42,6 +42,11 @@ class Demo4_Buffer : ItemRunnable() {
             }
 
         })
+
+        /**
+         * transform Observable<T> to Observable<List<T>>
+         * 按照规则将上游事件打包，然后转换成 新的 Observable
+         */
 
         /**
          *

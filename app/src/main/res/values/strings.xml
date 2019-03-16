@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">RxJavaTutorial</string>
 
+    <string name="item_title_basic">Basic</string>
     <string name="item_basic_usage">Basic Usage</string>
     <string name="item_basic_usage2">Basic Usage 2</string>
     <string name="item_thread_scheduler">Thread Scheduler</string>
     <string name="item_thread_scheduler2">Thread Scheduler 2</string>
 
+    <string name="item_title_create">Create Observable</string>
     <string name="item_create_demo_1">Create Operator</string>
     <string name="item_create_demo_2">Create Operator 2</string>
     <string name="item_create_just">Just Operator</string>
@@ -19,9 +21,21 @@
     <string name="item_create_range">Range Operator</string>
     <string name="item_create_range_long">RangeLong Operator</string>
 
+    <string name="item_title_transform">Transform Operator</string>
     <string name="item_map_demo1">Map Usage</string>
     <string name="item_map_flat_map">FlatMap Usage</string>
     <string name="item_map_concat_map">ConcatMap Usage</string>
     <string name="item_buffer">Buffer Operator Usage</string>
-    <string name="item_zip_operator_usage">Zip Operator Usage</string>
+
+    <string name="item_title_combine">Combine Operator</string>
+    <string name="item_combine_concat">ConcatXXX Operator</string>
+    <string name="item_combine_concat_delay_error">ConcatDelayError Operator</string>
+    <string name="item_combine_merge">MergeXXX Operator</string>
+    <string name="item_combine_merge_delay_error">MergeDelayError Operator</string>
+    <string name="item_combine_zip">Zip Operator</string>
+    <string name="item_combine_combine_latest">CombineLatest Operator</string>
+    <string name="item_combine_reduce">Reduce Operator</string>
+    <string name="item_combine_collect">Collect Operator</string>
+
+
 </resources>

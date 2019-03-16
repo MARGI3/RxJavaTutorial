@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator.t2_change
+package com.rxjava.tutorial.p3_operator.t2_transform
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable

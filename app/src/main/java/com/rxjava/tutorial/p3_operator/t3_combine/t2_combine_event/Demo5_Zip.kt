@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p4_zip_function
+package com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event
 
 import com.rxjava.tutorial.ItemRunnable
 import android.util.Log
@@ -6,16 +6,14 @@ import io.reactivex.Observable
 import io.reactivex.ObservableEmitter
 import io.reactivex.ObservableOnSubscribe
 import io.reactivex.Observer
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.BiFunction
 import io.reactivex.internal.schedulers.IoScheduler
 
-class ZipOperatorDemo : ItemRunnable() {
-
-    companion object {
-        private const val TAG = "ZipOperatorDemo"
-    }
+/**
+ * 合并 多个被观察者（Observable）发送的事件，生成一个新的事件序列（即组合过后的事件序列），并最终发送
+ */
+class Demo5_Zip : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
@@ -122,27 +120,27 @@ class ZipOperatorDemo : ItemRunnable() {
          * zip 操作只会触发4次
          */
 
-        //ZipOperatorDemo: operate onSubscribe
-        //ZipOperatorDemo: RxCachedThreadScheduler-4 : emit A
-        //ZipOperatorDemo: RxCachedThreadScheduler-3 * emit 1
-        //ZipOperatorDemo: RxCachedThreadScheduler-3 # zip function A1
-        //ZipOperatorDemo: operate onNext A1
-        //ZipOperatorDemo: RxCachedThreadScheduler-3 * emit 2
-        //ZipOperatorDemo: RxCachedThreadScheduler-3 * emit 3
-        //ZipOperatorDemo: RxCachedThreadScheduler-3 * emit 4
-        //ZipOperatorDemo: RxCachedThreadScheduler-3 * emit complete1
-        //ZipOperatorDemo: RxCachedThreadScheduler-4 : emit B
-        //ZipOperatorDemo: RxCachedThreadScheduler-4 # zip function B2
-        //ZipOperatorDemo: operate onNext B2
-        //ZipOperatorDemo: RxCachedThreadScheduler-4 : emit C
-        //ZipOperatorDemo: RxCachedThreadScheduler-4 # zip function C3
-        //ZipOperatorDemo: operate onNext C3
-        //ZipOperatorDemo: RxCachedThreadScheduler-4 : emit complete2
-        //ZipOperatorDemo: operate onComplete
-        //ZipOperatorDemo: RxCachedThreadScheduler-1 * emit 4
-        //ZipOperatorDemo: RxCachedThreadScheduler-1 * emit 5
-        //ZipOperatorDemo: RxCachedThreadScheduler-1 * emit 6
-        //ZipOperatorDemo: RxCachedThreadScheduler-1 * emit 7
-        //ZipOperatorDemo: RxCachedThreadScheduler-1 * emit complete1
+        //Demo5_Zip: operate onSubscribe
+        //Demo5_Zip: RxCachedThreadScheduler-4 : emit A
+        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 1
+        //Demo5_Zip: RxCachedThreadScheduler-3 # zip function A1
+        //Demo5_Zip: operate onNext A1
+        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 2
+        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 3
+        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 4
+        //Demo5_Zip: RxCachedThreadScheduler-3 * emit complete1
+        //Demo5_Zip: RxCachedThreadScheduler-4 : emit B
+        //Demo5_Zip: RxCachedThreadScheduler-4 # zip function B2
+        //Demo5_Zip: operate onNext B2
+        //Demo5_Zip: RxCachedThreadScheduler-4 : emit C
+        //Demo5_Zip: RxCachedThreadScheduler-4 # zip function C3
+        //Demo5_Zip: operate onNext C3
+        //Demo5_Zip: RxCachedThreadScheduler-4 : emit complete2
+        //Demo5_Zip: operate onComplete
+        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 4
+        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 5
+        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 6
+        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 7
+        //Demo5_Zip: RxCachedThreadScheduler-1 * emit complete1
     }
 }
