@@ -18,10 +18,12 @@ import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo1_Co
 import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo2_ConcatDelayError
 import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo3_Merge
 import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo4_MergeDelayError
-import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo5_Zip
-import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo6_CombineLatest
-import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo7_Reduce
-import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo8_Collect
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo1_Zip
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo2_CombineLatest
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo3_Reduce
+import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo4_Collect
+import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo5_StartWith
+import com.rxjava.tutorial.p3_operator.Demo2_Count
 
 class MainActivity : AppCompatActivity() {
 
@@ -73,10 +75,14 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_combine_concat_delay_error, Demo2_ConcatDelayError::class.java))
         mModelList.add(ItemModel(R.string.item_combine_merge, Demo3_Merge::class.java))
         mModelList.add(ItemModel(R.string.item_combine_merge_delay_error, Demo4_MergeDelayError::class.java))
-        mModelList.add(ItemModel(R.string.item_combine_zip, Demo5_Zip::class.java))
-        mModelList.add(ItemModel(R.string.item_combine_combine_latest, Demo6_CombineLatest::class.java))
-        mModelList.add(ItemModel(R.string.item_combine_reduce, Demo7_Reduce::class.java))
-        mModelList.add(ItemModel(R.string.item_combine_collect, Demo8_Collect::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_zip, Demo1_Zip::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_combine_latest, Demo2_CombineLatest::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_reduce, Demo3_Reduce::class.java))
+        mModelList.add(ItemModel(R.string.item_combine_collect, Demo4_Collect::class.java))
+
+        mModelList.add(ItemModel(R.string.item_title_special_operator, ItemRunnable::class.java))
+        mModelList.add(ItemModel(R.string.item_start_with_operator, Demo5_StartWith::class.java))
+        mModelList.add(ItemModel(R.string.item_count_operator, Demo2_Count::class.java))
 
         return mModelList
     }

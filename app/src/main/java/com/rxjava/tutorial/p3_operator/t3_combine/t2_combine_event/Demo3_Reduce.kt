@@ -6,8 +6,11 @@ import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
 import io.reactivex.functions.Consumer
 
+/**
+ * 把Observable需要发送的事件聚合成1个事件 & 发送
+ */
 @Suppress("ClassName")
-class Demo7_Reduce : ItemRunnable() {
+class Demo3_Reduce : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
@@ -17,7 +20,7 @@ class Demo7_Reduce : ItemRunnable() {
         val disposable = observable.reduce(object : BiFunction<Int, Int, Int> {
 
             override fun apply(t1: Int, t2: Int): Int {
-                Log.d(TAG, "combine data : $t1 - $t2")
+                Log.d(TAG, "combine data : $t1 and $t2")
                 return t1 * t2
                 //根据返回方法的处理方式，可以是 累乘  累加 或者其他运算
                 //规则：
@@ -35,4 +38,8 @@ class Demo7_Reduce : ItemRunnable() {
         })
     }
 
+    //RxJavaTutorial: combine data : 1 and 2
+    //RxJavaTutorial: combine data : 2 and 3
+    //RxJavaTutorial: combine data : 6 and 4
+    //RxJavaTutorial: result : 24
 }

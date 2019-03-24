@@ -13,36 +13,44 @@ import java.util.concurrent.TimeUnit
  * 最终基于该函数的结果发送数据
  */
 @Suppress("ClassName")
-class Demo6_CombineLatest : ItemRunnable() {
+class Demo2_CombineLatest : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
         super.run()
 
-        val observable1 = Observable.just(1L, 2L, 3L)
+        val observable1 = Observable.just("A", "B", "C")
 
         val observable2 = Observable.intervalRange(0L, 4, 1, 1, TimeUnit.SECONDS)
 
         @Suppress("UNUSED_VARIABLE")
-        val disposable = Observable.combineLatest(observable1, observable2, object : BiFunction<Long, Long, Long> {
+        val disposable = Observable.combineLatest(observable1, observable2, object : BiFunction<String, Long, String> {
 
-            override fun apply(t1: Long, t2: Long): Long {
+            override fun apply(t1: String, t2: Long): String {
                 // o1 = 第1个Observable发送的最新（最后）1个数据
                 // o2 = 第2个Observable发送的每1个数据
-                Log.d(TAG, "combine data： $t1 - $t2 ")
+                Log.d(TAG, "combine data： $t1 and $t2 ")
                 return t1 + t2
             }
 
-        }).subscribe(object : Consumer<Long> {
+        }).subscribe(object : Consumer<String> {
 
-            override fun accept(t: Long?) {
+            override fun accept(t: String?) {
                 Log.d(TAG, "result： $t")
-
             }
 
         })
 
         //Observable.combineLatestDelayError  the same like mergeDelayError concatDelayError
     }
+
+    //RxJavaTutorial: combine data： C and 0
+    //RxJavaTutorial: result： C0
+    //RxJavaTutorial: combine data： C and 1
+    //RxJavaTutorial: result： C1
+    //RxJavaTutorial: combine data： C and 2
+    //RxJavaTutorial: result： C2
+    //RxJavaTutorial: combine data： C and 3
+    //RxJavaTutorial: result： C3
 
 }

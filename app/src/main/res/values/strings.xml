@@ -37,5 +37,9 @@
     <string name="item_combine_reduce">Reduce Operator</string>
     <string name="item_combine_collect">Collect Operator</string>
 
+    <string name="item_title_special_operator">Special Operator</string>
+    <string name="item_start_with_operator">StartWith Operator</string>
+    <string name="item_count_operator">Count Operator</string>
+
 
 </resources>

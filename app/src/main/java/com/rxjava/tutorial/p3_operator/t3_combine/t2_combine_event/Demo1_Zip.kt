@@ -13,7 +13,8 @@ import io.reactivex.internal.schedulers.IoScheduler
 /**
  * 合并 多个被观察者（Observable）发送的事件，生成一个新的事件序列（即组合过后的事件序列），并最终发送
  */
-class Demo5_Zip : ItemRunnable() {
+@Suppress("ClassName")
+class Demo1_Zip : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
@@ -120,27 +121,25 @@ class Demo5_Zip : ItemRunnable() {
          * zip 操作只会触发4次
          */
 
-        //Demo5_Zip: operate onSubscribe
-        //Demo5_Zip: RxCachedThreadScheduler-4 : emit A
-        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 1
-        //Demo5_Zip: RxCachedThreadScheduler-3 # zip function A1
-        //Demo5_Zip: operate onNext A1
-        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 2
-        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 3
-        //Demo5_Zip: RxCachedThreadScheduler-3 * emit 4
-        //Demo5_Zip: RxCachedThreadScheduler-3 * emit complete1
-        //Demo5_Zip: RxCachedThreadScheduler-4 : emit B
-        //Demo5_Zip: RxCachedThreadScheduler-4 # zip function B2
-        //Demo5_Zip: operate onNext B2
-        //Demo5_Zip: RxCachedThreadScheduler-4 : emit C
-        //Demo5_Zip: RxCachedThreadScheduler-4 # zip function C3
-        //Demo5_Zip: operate onNext C3
-        //Demo5_Zip: RxCachedThreadScheduler-4 : emit complete2
-        //Demo5_Zip: operate onComplete
-        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 4
-        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 5
-        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 6
-        //Demo5_Zip: RxCachedThreadScheduler-1 * emit 7
-        //Demo5_Zip: RxCachedThreadScheduler-1 * emit complete1
+        //RxJavaTutorial: operate onSubscribe
+        //RxJavaTutorial: RxCachedThreadScheduler-2 : emit A
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 1
+        //RxJavaTutorial: RxCachedThreadScheduler-1 # zip function A1
+        //RxJavaTutorial: operate onNext A1
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 2
+        //RxJavaTutorial: RxCachedThreadScheduler-2 : emit B
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 3
+        //RxJavaTutorial: RxCachedThreadScheduler-1 # zip function B2
+        //RxJavaTutorial: operate onNext B2
+        //RxJavaTutorial: RxCachedThreadScheduler-2 : emit C
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 4
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 5
+        //RxJavaTutorial: RxCachedThreadScheduler-2 # zip function C3
+        //RxJavaTutorial: operate onNext C3
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 6
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit 7
+        //RxJavaTutorial: RxCachedThreadScheduler-2 : emit complete2
+        //RxJavaTutorial: operate onComplete
+        //RxJavaTutorial: RxCachedThreadScheduler-1 * emit complete1
     }
 }

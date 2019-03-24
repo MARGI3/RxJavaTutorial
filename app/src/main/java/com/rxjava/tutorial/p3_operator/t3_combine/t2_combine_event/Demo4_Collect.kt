@@ -11,7 +11,7 @@ import java.util.concurrent.Callable
  * 将被观察者Observable发送的数据事件收集到一个数据结构里
  */
 @Suppress("ClassName")
-class Demo8_Collect : ItemRunnable() {
+class Demo4_Collect : ItemRunnable() {
 
     @Suppress("ObjectLiteralToLambda")
     override fun run() {
@@ -45,5 +45,7 @@ class Demo8_Collect : ItemRunnable() {
 
         })
     }
+
+    //RxJavaTutorial: result : [2, 4, 6, 8, 10]
 
 }
