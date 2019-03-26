@@ -10,7 +10,17 @@ import io.reactivex.disposables.Disposable
  * author : magic
  * date   : 14/03/2019
  * mail   : 562224864cross@gmail.com
+ *
+ * periodically gather items from an Observable into bundles
+ *
+ * and emit these bundles rather than emitting the items one at a time
+ *
+ * 定期将event打包
+ *
+ * 然后一起发送打包后的events （相比于原始的 一次发送一个）
+ *
  */
+@Suppress("ClassName")
 class Demo4_Buffer : ItemRunnable() {
 
     override fun run() {
@@ -57,7 +67,7 @@ class Demo4_Buffer : ItemRunnable() {
          * second buffer: count = 3
          *                skip = 5
          *                because skip = 5, so start from No.1 + 5 = No.6 item
-         *                6, 7, 8 put into buffer area, then emit event 1, 2, 3
+         *                6, 7, 8 put into buffer area, then emit event 6, 7, 8
          *
          * third buffer: count = 3
          *               skip = 5
@@ -68,6 +78,20 @@ class Demo4_Buffer : ItemRunnable() {
          *
          *
          */
+
+        //RxJavaTutorial: start subscribe
+        //RxJavaTutorial: ------ buffer size = 3
+        //RxJavaTutorial:  event value = 1
+        //RxJavaTutorial:  event value = 2
+        //RxJavaTutorial:  event value = 3
+        //RxJavaTutorial: ------ buffer size = 3
+        //RxJavaTutorial:  event value = 6
+        //RxJavaTutorial:  event value = 7
+        //RxJavaTutorial:  event value = 8
+        //RxJavaTutorial: ------ buffer size = 2
+        //RxJavaTutorial:  event value = 11
+        //RxJavaTutorial:  event value = 12
+        //RxJavaTutorial: handle complete
     }
 
 }

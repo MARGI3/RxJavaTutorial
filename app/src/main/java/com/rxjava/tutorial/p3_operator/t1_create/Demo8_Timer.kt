@@ -16,6 +16,9 @@ import java.util.concurrent.TimeUnit
  */
 
 /**
+ *
+ * create an Observable that emits a single item after a given delay
+ *
  * 作用
  * 快速创建1个被观察者对象（Observable）
  * 发送事件的特点：延迟指定时间后，发送1个数值0（Long类型）
@@ -23,6 +26,7 @@ import java.util.concurrent.TimeUnit
  * 本质 = 延迟指定时间后，调用一次 onNext(0)
  * 每次订阅后，都会得到一个刚创建的最新的Observable对象，这可以确保Observable对象里的数据是最新的
  */
+@Suppress("ClassName")
 class Demo8_Timer : ItemRunnable() {
 
     @SuppressLint("CheckResult")

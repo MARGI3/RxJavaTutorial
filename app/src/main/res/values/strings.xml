@@ -41,5 +41,14 @@
     <string name="item_start_with_operator">StartWith Operator</string>
     <string name="item_count_operator">Count Operator</string>
 
+    <string name="item_title_condition_boolean">Condition Boolean Operator</string>
+    <string name="item_all_operator">All Operator</string>
+    <string name="item_take_while_operator">TakeWhile Operator</string>
+    <string name="item_skip_while_operator">SkipWhile Operator</string>
+    <string name="item_take_until_operator">TakeUntil Operator</string>
+    <string name="item_take_until_operator_2">TakeUntil2 Operator</string>
+    <string name="item_skip_until_operator">SkipUntil Operator</string>
+    <string name="item_sequence_equal_operator">SequenceEqual Operator</string>
+
 
 </resources>

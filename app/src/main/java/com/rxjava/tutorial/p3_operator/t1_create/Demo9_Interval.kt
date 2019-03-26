@@ -10,12 +10,6 @@ import io.reactivex.disposables.Disposable
 import java.util.concurrent.TimeUnit
 
 /**
- * author : magic
- * date   : 13/03/2019
- * mail   : 562224864cross@gmail.com
- */
-
-/**
  * 作用
  * 1. 快速创建1个被观察者对象（Observable）
  * 2. 发送事件的特点：每隔指定时间 就发送 事件
@@ -23,6 +17,7 @@ import java.util.concurrent.TimeUnit
  * 发送的事件序列 = 从0开始、无限递增1的的整数序列
  *
  */
+@Suppress("ClassName")
 class Demo9_Interval : ItemRunnable() {
 
     @SuppressLint("CheckResult")

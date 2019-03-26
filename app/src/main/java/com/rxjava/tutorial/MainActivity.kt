@@ -23,7 +23,14 @@ import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo2_Combine
 import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo3_Reduce
 import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo4_Collect
 import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo5_StartWith
-import com.rxjava.tutorial.p3_operator.Demo2_Count
+import com.rxjava.tutorial.p3_operator.t3_combine.Demo2_Count
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo1_All
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo2_TakeWhile
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo3_SkipWhile
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo4_TakeUntil
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo5_TakeUntil2
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo6_SkipUntil
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo7_SequenceEqual
 
 class MainActivity : AppCompatActivity() {
 
@@ -83,6 +90,15 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_title_special_operator, ItemRunnable::class.java))
         mModelList.add(ItemModel(R.string.item_start_with_operator, Demo5_StartWith::class.java))
         mModelList.add(ItemModel(R.string.item_count_operator, Demo2_Count::class.java))
+
+        mModelList.add(ItemModel(R.string.item_title_condition_boolean, ItemRunnable::class.java))
+        mModelList.add(ItemModel(R.string.item_all_operator, Demo1_All::class.java))
+        mModelList.add(ItemModel(R.string.item_take_while_operator, Demo2_TakeWhile::class.java))
+        mModelList.add(ItemModel(R.string.item_skip_while_operator, Demo3_SkipWhile::class.java))
+        mModelList.add(ItemModel(R.string.item_take_until_operator, Demo4_TakeUntil::class.java))
+        mModelList.add(ItemModel(R.string.item_take_until_operator_2, Demo5_TakeUntil2::class.java))
+        mModelList.add(ItemModel(R.string.item_skip_until_operator, Demo6_SkipUntil::class.java))
+        mModelList.add(ItemModel(R.string.item_sequence_equal_operator, Demo7_SequenceEqual::class.java))
 
         return mModelList
     }

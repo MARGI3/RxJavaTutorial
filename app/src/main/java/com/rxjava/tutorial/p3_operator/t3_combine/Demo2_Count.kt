@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator
+package com.rxjava.tutorial.p3_operator.t3_combine
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
