@@ -4,16 +4,19 @@ import android.annotation.SuppressLint
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
 import io.reactivex.Observable
+import io.reactivex.Observer
+import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Consumer
 import java.util.concurrent.TimeUnit
 
 /**
  * 关联两个Observable 情况
+ *
+ * observable1 正常发送事件  直到observable2发送事件 则停止 observable1 的事件发送
  */
 @Suppress("ClassName")
 class Demo5_TakeUntil2 : ItemRunnable() {
 
-    @Suppress("ObjectLiteralToLambda")
     @SuppressLint("CheckResult")
     override fun run() {
         super.run()
@@ -24,10 +27,22 @@ class Demo5_TakeUntil2 : ItemRunnable() {
         val observable2 = Observable.timer(4, TimeUnit.SECONDS)
 
         observable1.takeUntil(observable2)
-            .subscribe(object : Consumer<Long> {
+            .subscribe(object : Observer<Long> {
 
-                override fun accept(t: Long) {
-                    Log.d(TAG, "result $t , current time : ${System.currentTimeMillis()}")
+                override fun onSubscribe(d: Disposable) {
+                    Log.d(TAG, "onSubscribe , current time : ${System.currentTimeMillis()}")
+                }
+
+                override fun onNext(t: Long) {
+                    Log.d(TAG, "onNext $t , current time : ${System.currentTimeMillis()}")
+                }
+
+                override fun onComplete() {
+                    Log.d(TAG, "onComplete , current time : ${System.currentTimeMillis()}")
+                }
+
+                override fun onError(e: Throwable) {
+                    Log.e(TAG, "onError $e")
                 }
             })
 
@@ -38,8 +53,10 @@ class Demo5_TakeUntil2 : ItemRunnable() {
          * observable1 正常发送事件  直到observable2发送事件 则停止 observable1 的事件发送
          */
 
-        //RxJavaTutorial: result 0 , current time : 1553587790439
-        //RxJavaTutorial: result 1 , current time : 1553587791438
-        //RxJavaTutorial: result 2 , current time : 1553587792438
+        //RxJavaTutorial: onSubscribe , current time : 1553655977436
+        //RxJavaTutorial: onNext 0 , current time : 1553655978441
+        //RxJavaTutorial: onNext 1 , current time : 1553655979441
+        //RxJavaTutorial: onNext 2 , current time : 1553655980441
+        //RxJavaTutorial: onComplete , current time : 1553655981441
     }
 }

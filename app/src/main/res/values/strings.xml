@@ -49,6 +49,10 @@
     <string name="item_take_until_operator_2">TakeUntil2 Operator</string>
     <string name="item_skip_until_operator">SkipUntil Operator</string>
     <string name="item_sequence_equal_operator">SequenceEqual Operator</string>
+    <string name="item_contains">Contains Operator</string>
+    <string name="item_is_empty" translatable="false">IsEmpty Operator</string>
+    <string name="item_amb_operator">Amb Operator</string>
+    <string name="item_default_if_empty">DefaultIfEmpty Operator</string>
 
 
 </resources>

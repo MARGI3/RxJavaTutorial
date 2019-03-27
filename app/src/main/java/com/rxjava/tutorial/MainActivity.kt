@@ -24,6 +24,8 @@ import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo3_Reduce
 import com.rxjava.tutorial.p3_operator.t3_combine.t2_combine_event.Demo4_Collect
 import com.rxjava.tutorial.p3_operator.t3_combine.t1_combine_observable.Demo5_StartWith
 import com.rxjava.tutorial.p3_operator.t3_combine.Demo2_Count
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo10_Amb
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo11_DefaultIfEmpty
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo1_All
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo2_TakeWhile
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo3_SkipWhile
@@ -31,6 +33,8 @@ import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo4_TakeUntil
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo5_TakeUntil2
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo6_SkipUntil
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo7_SequenceEqual
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo8_Contains
+import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo9_IsEmpty
 
 class MainActivity : AppCompatActivity() {
 
@@ -99,6 +103,10 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_take_until_operator_2, Demo5_TakeUntil2::class.java))
         mModelList.add(ItemModel(R.string.item_skip_until_operator, Demo6_SkipUntil::class.java))
         mModelList.add(ItemModel(R.string.item_sequence_equal_operator, Demo7_SequenceEqual::class.java))
+        mModelList.add(ItemModel(R.string.item_contains, Demo8_Contains::class.java))
+        mModelList.add(ItemModel(R.string.item_is_empty, Demo9_IsEmpty::class.java))
+        mModelList.add(ItemModel(R.string.item_amb_operator, Demo10_Amb::class.java))
+        mModelList.add(ItemModel(R.string.item_default_if_empty, Demo11_DefaultIfEmpty::class.java))
 
         return mModelList
     }
