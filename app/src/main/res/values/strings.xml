@@ -54,5 +54,12 @@
     <string name="item_amb_operator">Amb Operator</string>
     <string name="item_default_if_empty">DefaultIfEmpty Operator</string>
 
+    <string name="item_title_back_pressure">BackPressure</string>
+    <string name="item_flowable_usage">Flowable</string>
+    <string name="item_flowable_sync_1">Flowable Sync</string>
+    <string name="item_flowable_sync_2">Flowable Sync 2</string>
+    <string name="item_flowable_async_1">Flowable Async</string>
+    <string name="item_flowable_async_2">Flowable Async 2</string>
+
 
 </resources>
