@@ -58,6 +58,10 @@
     <string name="item_flowable_usage">Flowable</string>
     <string name="item_flowable_sync_1">Flowable Sync</string>
     <string name="item_flowable_sync_2">Flowable Sync 2</string>
+    <string name="item_flowable_sync_3">Flowable Sync 3</string>
+    <string name="item_flowable_sync_4">Flowable Sync 4</string>
+    <string name="item_flowable_sync_5">Flowable Sync 5</string>
+    <string name="item_flowable_sync_6">Flowable Sync 6</string>
     <string name="item_flowable_async_1">Flowable Async</string>
     <string name="item_flowable_async_2">Flowable Async 2</string>
 

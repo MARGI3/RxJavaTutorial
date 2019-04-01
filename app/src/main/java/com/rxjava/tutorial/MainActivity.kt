@@ -36,10 +36,9 @@ import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo7_SequenceEqual
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo8_Contains
 import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo9_IsEmpty
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.Demo1_Flowable
-import com.rxjava.tutorial.p3_operator.t5_back_pressure.sync.Demo1_FlowableSync
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.async.Demo1_FlowableAsync
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.async.Demo2_FlowableAsync
-import com.rxjava.tutorial.p3_operator.t5_back_pressure.sync.Demo2_FlowableSync
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.sync.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -117,6 +116,10 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_flowable_usage, Demo1_Flowable::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_sync_1, Demo1_FlowableSync::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_sync_2, Demo2_FlowableSync::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_sync_3, Demo3_FlowableSync::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_sync_4, Demo4_FlowableSync::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_sync_5, Demo5_FlowableSync::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_sync_6, Demo6_FlowableSync::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_async_1, Demo1_FlowableAsync::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_async_2, Demo2_FlowableAsync::class.java))
 
