@@ -38,6 +38,12 @@ import com.rxjava.tutorial.p3_operator.t4_condition_boolean.Demo9_IsEmpty
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.Demo1_Flowable
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.async.Demo1_FlowableAsync
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.async.Demo2_FlowableAsync
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.async.Demo3_FlowableAsync
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo1_Error
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo2_Missing
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo3_Buffer
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo4_Drop
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo5_Latest
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.sync.*
 
 class MainActivity : AppCompatActivity() {
@@ -122,6 +128,13 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_flowable_sync_6, Demo6_FlowableSync::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_async_1, Demo1_FlowableAsync::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_async_2, Demo2_FlowableAsync::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_async_3, Demo3_FlowableAsync::class.java))
+
+        mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_error, Demo1_Error::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_missing, Demo2_Missing::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_buffer, Demo3_Buffer::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_drop, Demo4_Drop::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_latest, Demo5_Latest::class.java))
 
         return mModelList
     }

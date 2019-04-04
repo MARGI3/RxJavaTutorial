@@ -8,9 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 
-class ItemFragment: Fragment(), View.OnClickListener {
+class ItemFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var mButton: Button
+    private lateinit var mExecuteButton: Button
+    private lateinit var mTriggerButton: Button
     private lateinit var mItemRunnable: ItemRunnable
 
     companion object {
@@ -19,7 +20,7 @@ class ItemFragment: Fragment(), View.OnClickListener {
         private const val KEY_EXECUTOR = "argument.executor"
 
         @JvmStatic
-        fun newInstance(@StringRes descRes: Int, clazz: Class<ItemRunnable>) : ItemFragment {
+        fun newInstance(@StringRes descRes: Int, clazz: Class<ItemRunnable>): ItemFragment {
             val itemFragment = ItemFragment()
             val arguments = Bundle()
             arguments.putInt(KEY_DESC, descRes)
@@ -46,13 +47,24 @@ class ItemFragment: Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mButton = view.findViewById(R.id.execute)
-        mButton.setOnClickListener(this)
+        mExecuteButton = view.findViewById(R.id.execute)
+        mTriggerButton = view.findViewById(R.id.trigger)
+        mExecuteButton.setOnClickListener(this)
+        if (mItemRunnable is ITrigger) {
+            mTriggerButton.visibility = View.VISIBLE
+            mTriggerButton.setOnClickListener(this)
+        } else {
+            mTriggerButton.visibility = View.GONE
+            mTriggerButton.setOnClickListener(null)
+        }
     }
 
     override fun onClick(v: View?) {
-        when(v?.id) {
+        when (v?.id) {
             R.id.execute -> mItemRunnable.run()
+            R.id.trigger -> if (mItemRunnable is ITrigger) {
+                (mItemRunnable as ITrigger).onTrigger(v)
+            }
         }
     }
 }

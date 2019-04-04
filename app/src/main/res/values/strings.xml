@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">RxJavaTutorial</string>
 
+    <string name="button_run">Run</string>
+    <string name="button_trigger">Trigger</string>
+
     <string name="item_title_basic">Basic</string>
     <string name="item_basic_usage">Basic Usage</string>
     <string name="item_basic_usage2">Basic Usage 2</string>
@@ -64,6 +67,13 @@
     <string name="item_flowable_sync_6">Flowable Sync 6</string>
     <string name="item_flowable_async_1">Flowable Async</string>
     <string name="item_flowable_async_2">Flowable Async 2</string>
+    <string name="item_flowable_async_3">Flowable Async 3</string>
+
+    <string name="item_flowable_back_pressure_strategy_error">Strategy Error</string>
+    <string name="item_flowable_back_pressure_strategy_missing">Strategy Missing</string>
+    <string name="item_flowable_back_pressure_strategy_buffer">Strategy Buffer</string>
+    <string name="item_flowable_back_pressure_strategy_drop">Strategy Drop</string>
+    <string name="item_flowable_back_pressure_strategy_latest">Strategy Latest</string>
 
 
 </resources>
