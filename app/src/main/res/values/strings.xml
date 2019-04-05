@@ -74,6 +74,12 @@
     <string name="item_flowable_back_pressure_strategy_buffer">Strategy Buffer</string>
     <string name="item_flowable_back_pressure_strategy_drop">Strategy Drop</string>
     <string name="item_flowable_back_pressure_strategy_latest">Strategy Latest</string>
+    <string name="item_flowable_back_pressure_flowable_interval">Flowable Interval</string>
 
+    <string name="item_title_filter">Filter</string>
+    <string name="item_filter_operator">Filter Operator</string>
+    <string name="item_filter_of_type_operator">OfType Operator</string>
+    <string name="item_filter_skip_index_operator">SkipIndex Operator</string>
+    <string name="item_filter_skip_time_operator">SkipTime Operator</string>
 
 </resources>

@@ -44,7 +44,12 @@ import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo2_Missing
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo3_Buffer
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo4_Drop
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo5_Latest
+import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo6_FlowableInterval
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.sync.*
+import com.rxjava.tutorial.p3_operator.t6_filter.Demo1_Filter
+import com.rxjava.tutorial.p3_operator.t6_filter.Demo2_OfType
+import com.rxjava.tutorial.p3_operator.t6_filter.Demo3_SkipIndex
+import com.rxjava.tutorial.p3_operator.t6_filter.Demo4_SkipTime
 
 class MainActivity : AppCompatActivity() {
 
@@ -135,6 +140,13 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_buffer, Demo3_Buffer::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_drop, Demo4_Drop::class.java))
         mModelList.add(ItemModel(R.string.item_flowable_back_pressure_strategy_latest, Demo5_Latest::class.java))
+        mModelList.add(ItemModel(R.string.item_flowable_back_pressure_flowable_interval, Demo6_FlowableInterval::class.java))
+
+        mModelList.add(ItemModel(R.string.item_title_filter, ItemRunnable::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_operator, Demo1_Filter::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_of_type_operator, Demo2_OfType::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_skip_index_operator, Demo3_SkipIndex::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_skip_time_operator, Demo4_SkipTime::class.java))
 
         return mModelList
     }

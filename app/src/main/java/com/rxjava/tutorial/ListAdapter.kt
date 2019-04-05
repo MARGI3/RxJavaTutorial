@@ -42,7 +42,7 @@ class ListAdapter(list: List<ItemModel>) : RecyclerView.Adapter<ListAdapter.Item
                 mText.setBackgroundColor(Color.WHITE)
                 mText.setOnClickListener {
                     val context = it.context
-                    context.startActivity(ItemActivity.createIntent(context, model.mClazz))
+                    context.startActivity(ItemActivity.createIntent(context, model.mClazz, model.mTitle))
                 }
             }
             mText.setText(model.mTitle)
