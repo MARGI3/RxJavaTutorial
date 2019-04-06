@@ -1,29 +1,21 @@
-package com.rxjava.tutorial.p3_operator.t6_filter
+package com.rxjava.tutorial.p3_operator.t6_filter.codition
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable
 import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
-import io.reactivex.functions.Predicate
 
 @Suppress("ClassName")
-class Demo3_SkipIndex : ItemRunnable() {
+class Demo2_OfType : ItemRunnable() {
 
     /**
-     * 跳过某个事件
+     * 过滤 特定数据类型的数据
      */
     override fun run() {
         super.run()
-
-        val index = 3L
-
-        val indexLast = 2
-
         Observable.just(1, "A", 3, "C", "D", "L", 7, 8)
-            .skip(index)
-            .skipLast(indexLast)
-            .subscribe(object : Observer<Any> {
+            .ofType(String::class.java).subscribe(object : Observer<Any> {
 
                 override fun onSubscribe(d: Disposable) {
                     Log.d(TAG, "start subscribe")

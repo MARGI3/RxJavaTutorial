@@ -1,4 +1,4 @@
-package com.rxjava.tutorial.p3_operator.t6_filter
+package com.rxjava.tutorial.p3_operator.t6_filter.codition
 
 import android.util.Log
 import com.rxjava.tutorial.ItemRunnable

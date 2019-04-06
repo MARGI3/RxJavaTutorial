@@ -81,5 +81,14 @@
     <string name="item_filter_of_type_operator">OfType Operator</string>
     <string name="item_filter_skip_index_operator">SkipIndex Operator</string>
     <string name="item_filter_skip_time_operator">SkipTime Operator</string>
+    <string name="item_filter_distinct">Distinct Operator</string>
+    <string name="item_filter_distinct_until_changed">DistinctUntilChanged Operator</string>
+    <string name="item_filter_take">Take Operator</string>
+    <string name="item_filter_take_last">TakeLast Operator</string>
+    <string name="item_filter_throttle_first">Throttle First Operator</string>
+    <string name="item_filter_throttle_last">Throttle Last Operator</string>
+    <string name="item_filter_sample">Sample Operator</string>
+    <string name="item_filter_throttle_with_time_out">Throttle With TimeOut Operator</string>
+    <string name="item_filter_debounce">Debounce Operator</string>
 
 </resources>

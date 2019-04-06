@@ -46,10 +46,10 @@ import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo4_Drop
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo5_Latest
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.strategy.Demo6_FlowableInterval
 import com.rxjava.tutorial.p3_operator.t5_back_pressure.sync.*
-import com.rxjava.tutorial.p3_operator.t6_filter.Demo1_Filter
-import com.rxjava.tutorial.p3_operator.t6_filter.Demo2_OfType
-import com.rxjava.tutorial.p3_operator.t6_filter.Demo3_SkipIndex
-import com.rxjava.tutorial.p3_operator.t6_filter.Demo4_SkipTime
+import com.rxjava.tutorial.p3_operator.t6_filter.size.Demo1_Take
+import com.rxjava.tutorial.p3_operator.t6_filter.size.Demo2_TakeLast
+import com.rxjava.tutorial.p3_operator.t6_filter.codition.*
+import com.rxjava.tutorial.p3_operator.t6_filter.time.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -147,6 +147,15 @@ class MainActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_filter_of_type_operator, Demo2_OfType::class.java))
         mModelList.add(ItemModel(R.string.item_filter_skip_index_operator, Demo3_SkipIndex::class.java))
         mModelList.add(ItemModel(R.string.item_filter_skip_time_operator, Demo4_SkipTime::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_distinct, Demo5_Distinct::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_distinct_until_changed, Demo6_DistinctUntilChanged::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_take, Demo1_Take::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_take_last, Demo2_TakeLast::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_throttle_first, Demo1_ThrottleFirst::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_throttle_last, Demo2_ThrottleLast::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_sample, Demo3_Sample::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_throttle_with_time_out, Demo4_ThrottleWithTimeOut::class.java))
+        mModelList.add(ItemModel(R.string.item_filter_debounce, Demo5_Debounce::class.java))
 
         return mModelList
     }
