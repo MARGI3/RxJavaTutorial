@@ -1,65 +1,6 @@
 <resources>
     <string name="app_name">RxJavaTutorial</string>
 
-    <string name="item_title_basic">Basic</string>
-    <string name="item_basic_usage">Basic Usage</string>
-    <string name="item_basic_usage2">Basic Usage 2</string>
-    <string name="item_thread_scheduler">Thread Scheduler</string>
-    <string name="item_thread_scheduler2">Thread Scheduler 2</string>
-
-    <string name="item_title_create">Create Observable</string>
-    <string name="item_create_demo_1">Create Operator</string>
-    <string name="item_create_demo_2">Create Operator 2</string>
-    <string name="item_create_just">Just Operator</string>
-    <string name="item_create_from_array">FromArray Operator</string>
-    <string name="item_create_from_iterable">FromIterable Operator</string>
-    <string name="item_create_special_create">Special Create Operator</string>
-    <string name="item_create_defer">Defer Operator</string>
-    <string name="item_create_timer">Timer Operator</string>
-    <string name="item_create_interval">Interval Operator</string>
-    <string name="item_create_interval_range">IntervalRange Operator</string>
-    <string name="item_create_range">Range Operator</string>
-    <string name="item_create_range_long">RangeLong Operator</string>
-
-    <string name="item_title_transform">Transform Operator</string>
-    <string name="item_map_demo1">Map Usage</string>
-    <string name="item_map_flat_map">FlatMap Usage</string>
-    <string name="item_map_concat_map">ConcatMap Usage</string>
-    <string name="item_buffer">Buffer Operator Usage</string>
-
-    <string name="item_title_combine">Combine Operator</string>
-    <string name="item_combine_concat">ConcatXXX Operator</string>
-    <string name="item_combine_concat_delay_error">ConcatDelayError Operator</string>
-    <string name="item_combine_merge">MergeXXX Operator</string>
-    <string name="item_combine_merge_delay_error">MergeDelayError Operator</string>
-    <string name="item_combine_zip">Zip Operator</string>
-    <string name="item_combine_combine_latest">CombineLatest Operator</string>
-    <string name="item_combine_reduce">Reduce Operator</string>
-    <string name="item_combine_collect">Collect Operator</string>
-
-    <string name="item_title_special_operator">Special Operator</string>
-    <string name="item_start_with_operator">StartWith Operator</string>
-    <string name="item_count_operator">Count Operator</string>
-
-    <string name="item_title_condition_boolean">Condition Boolean Operator</string>
-    <string name="item_all_operator">All Operator</string>
-    <string name="item_take_while_operator">TakeWhile Operator</string>
-    <string name="item_skip_while_operator">SkipWhile Operator</string>
-    <string name="item_take_until_operator">TakeUntil Operator</string>
-    <string name="item_take_until_operator_2">TakeUntil2 Operator</string>
-    <string name="item_skip_until_operator">SkipUntil Operator</string>
-    <string name="item_sequence_equal_operator">SequenceEqual Operator</string>
-    <string name="item_contains">Contains Operator</string>
-    <string name="item_is_empty" translatable="false">IsEmpty Operator</string>
-    <string name="item_amb_operator">Amb Operator</string>
-    <string name="item_default_if_empty">DefaultIfEmpty Operator</string>
-
-    <string name="item_title_back_pressure">BackPressure</string>
-    <string name="item_flowable_usage">Flowable</string>
-    <string name="item_flowable_sync_1">Flowable Sync</string>
-    <string name="item_flowable_sync_2">Flowable Sync 2</string>
-    <string name="item_flowable_async_1">Flowable Async</string>
-    <string name="item_flowable_async_2">Flowable Async 2</string>
-
-
+    <string name="button_operator">Operator List</string>
+    <string name="button_practice">Practice List</string>
 </resources>
