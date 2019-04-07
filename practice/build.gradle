@@ -29,7 +29,11 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVer}"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxjavaAdapterVer}"
+    implementation "com.squareup.retrofit2:converter-gson:${gsonVer}"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
     implementation "com.android.support:appcompat-v7:${supportLibVer}"
     implementation "com.android.support:recyclerview-v7:$supportLibVer"
     implementation "com.android.support.constraint:constraint-layout:${constraintLayoutVer}"

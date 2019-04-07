@@ -1,4 +1,4 @@
-package com.rxjava.operator
+package com.rxjava.practice
 
 import android.content.Context
 import android.content.Intent

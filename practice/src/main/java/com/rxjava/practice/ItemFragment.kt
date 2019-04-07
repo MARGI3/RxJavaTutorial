@@ -1,7 +1,6 @@
-package com.rxjava.operator
+package com.rxjava.practice
 
 import android.os.Bundle
-import android.support.annotation.StringRes
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -63,6 +62,13 @@ class ItemFragment : Fragment(), View.OnClickListener {
             R.id.trigger -> if (mItemRunnable is ITrigger) {
                 (mItemRunnable as ITrigger).onTrigger(v)
             }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (mItemRunnable is Cancelable) {
+            (mItemRunnable as Cancelable).cancel()
         }
     }
 }
