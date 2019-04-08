@@ -39,10 +39,10 @@ class Demo2_FailedRetry : ItemRunnable(), Cancelable {
         super.run()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl(mBaseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
+                .baseUrl(mBaseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build()
 
         val translateService = retrofit.create(TranslateService::class.java)
 
@@ -59,7 +59,7 @@ class Demo2_FailedRetry : ItemRunnable(), Cancelable {
 
                     override fun apply(t: Throwable): ObservableSource<*> {
 
-                        Log.d(TAG,  "request throwable = $t ")
+                        Log.d(TAG, "request throwable = $t ")
 
                         /**
                          * 根据请求Observable中的 Throwable 来判断是否要重试
@@ -90,27 +90,26 @@ class Demo2_FailedRetry : ItemRunnable(), Cancelable {
                     }
                 })
             }
-        })
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread()).subscribe(object : Observer<Translation> {
+        }).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(object : Observer<Translation> {
 
-                override fun onSubscribe(d: Disposable) {
-                    Log.d(TAG, "request onSubscribe")
-                    mCompositeDisposable.add(d)
-                }
+                    override fun onSubscribe(d: Disposable) {
+                        Log.d(TAG, "request onSubscribe")
+                        mCompositeDisposable.add(d)
+                    }
 
-                override fun onNext(t: Translation) {
-                    Log.d(TAG, "request onNext ${t.content}")
-                }
+                    override fun onNext(t: Translation) {
+                        Log.d(TAG, "request onNext ${t.content}")
+                    }
 
-                override fun onComplete() {
-                    Log.d(TAG, "request onComplete")
-                }
+                    override fun onComplete() {
+                        Log.d(TAG, "request onComplete")
+                    }
 
-                override fun onError(e: Throwable) {
-                    Log.e(TAG, "request onError $e")
-                }
-            })
+                    override fun onError(e: Throwable) {
+                        Log.e(TAG, "request onError $e")
+                    }
+                })
 
     }
 
