@@ -7,4 +7,5 @@
     <string name="item_network_polling_request">Polling Request</string>
     <string name="item_network_failed_retry">Failed Retry</string>
     <string name="item_nesting_request">Nesting Request</string>
+    <string name="item_cache">Cache</string>
 </resources>

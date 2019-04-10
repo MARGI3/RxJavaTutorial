@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView
 import com.rxjava.practice.p1_polling.Demo1_Polling
 import com.rxjava.practice.p1_polling.Demo2_FailedRetry
 import com.rxjava.practice.p1_polling.Demo3_NestingRequest
+import com.rxjava.practice.p1_polling.Demo4_Cache
 
 class PracticeListActivity : AppCompatActivity() {
 
@@ -38,6 +39,7 @@ class PracticeListActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_network_polling_request, Demo1_Polling::class.java))
         mModelList.add(ItemModel(R.string.item_network_failed_retry, Demo2_FailedRetry::class.java))
         mModelList.add(ItemModel(R.string.item_nesting_request, Demo3_NestingRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_cache, Demo4_Cache::class.java))
         return mModelList
     }
 
