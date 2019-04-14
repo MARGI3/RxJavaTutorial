@@ -7,10 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import com.rxjava.practice.p1_polling.Demo1_Polling
-import com.rxjava.practice.p1_polling.Demo2_FailedRetry
-import com.rxjava.practice.p1_polling.Demo3_NestingRequest
-import com.rxjava.practice.p1_polling.Demo4_Cache
+import com.rxjava.practice.demo.*
 
 class PracticeListActivity : AppCompatActivity() {
 
@@ -40,6 +37,8 @@ class PracticeListActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_network_failed_retry, Demo2_FailedRetry::class.java))
         mModelList.add(ItemModel(R.string.item_nesting_request, Demo3_NestingRequest::class.java))
         mModelList.add(ItemModel(R.string.item_cache, Demo4_Cache::class.java))
+        mModelList.add(ItemModel(R.string.item_merge_request, Demo5_MergeRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_zip_request, Demo6_ZipRequest::class.java))
         return mModelList
     }
 

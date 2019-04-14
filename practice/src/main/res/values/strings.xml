@@ -8,4 +8,6 @@
     <string name="item_network_failed_retry">Failed Retry</string>
     <string name="item_nesting_request">Nesting Request</string>
     <string name="item_cache">Cache</string>
+    <string name="item_merge_request">Merge Request</string>
+    <string name="item_zip_request">Zip Request</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.rxjava.practice.p1_polling
+package com.rxjava.practice.demo
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -21,7 +21,7 @@ class Demo4_Cache : ItemRunnable(), Cancelable {
     override fun run() {
         super.run()
 
-        var memoryCache: String? = null
+        val memoryCache: String? = null
         var diskCache: String?
 
         //从内存获取
