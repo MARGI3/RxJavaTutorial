@@ -1,4 +1,4 @@
-package com.rxjava.practice.p1_polling
+package com.rxjava.practice.demo
 
 import android.util.Log
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
