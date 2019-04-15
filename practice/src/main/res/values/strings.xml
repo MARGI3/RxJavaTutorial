@@ -10,4 +10,5 @@
     <string name="item_cache">Cache</string>
     <string name="item_merge_request">Merge Request</string>
     <string name="item_zip_request">Zip Request</string>
+    <string name="item_event_block">Event Block</string>
 </resources>

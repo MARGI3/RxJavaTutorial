@@ -30,10 +30,10 @@ class Demo6ZipRequest : ItemRunnable(), Cancelable {
         super.run()
 
         val retrofit = Retrofit.Builder()
-                .baseUrl(mBaseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build()
+            .baseUrl(mBaseUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .build()
 
         val translateService = retrofit.create(TranslateService::class.java)
 
@@ -49,26 +49,26 @@ class Demo6ZipRequest : ItemRunnable(), Cancelable {
             }
 
         }).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(object : Observer<String> {
+            .observeOn(AndroidSchedulers.mainThread()).subscribe(object : Observer<String> {
 
-                    override fun onSubscribe(d: Disposable) {
-                        Log.d(TAG, "onSubscribe")
-                        mCompositeDisposable.add(d)
-                    }
+                override fun onSubscribe(d: Disposable) {
+                    Log.d(TAG, "onSubscribe")
+                    mCompositeDisposable.add(d)
+                }
 
-                    override fun onNext(t: String) {
-                        Log.d(TAG, "onNext $t")
-                    }
+                override fun onNext(t: String) {
+                    Log.d(TAG, "onNext $t")
+                }
 
-                    override fun onComplete() {
-                        Log.d(TAG, "onComplete")
-                    }
+                override fun onComplete() {
+                    Log.d(TAG, "onComplete")
+                }
 
-                    override fun onError(e: Throwable) {
-                        Log.e(TAG, "onError $e")
-                    }
+                override fun onError(e: Throwable) {
+                    Log.e(TAG, "onError $e")
+                }
 
-                })
+            })
 
     }
 
@@ -82,5 +82,4 @@ class Demo6ZipRequest : ItemRunnable(), Cancelable {
     //RxJavaTutorial: zip result Content(from=en-EU, to=zh-CN, vendor=tencent, out=嗨世界, errorNum=null)Content(from=en-EU, to=zh-CN, vendor=tencent, out=第二喜世界,
     //RxJavaTutorial: onNext Content(from=en-EU, to=zh-CN, vendor=tencent, out=嗨世界, errorNum=null)Content(from=en-EU, to=zh-CN, vendor=tencent, out=第二喜世界, erro
     //RxJavaTutorial: onComplete
-
 }

@@ -1,42 +1,16 @@
 package com.rxjava.practice
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.rxjava.practice.intentcreator.BaseItemFragment
 
-class ItemFragment : Fragment(), View.OnClickListener {
+class NormalItemFragment : BaseItemFragment(), View.OnClickListener {
 
     private lateinit var mExecuteButton: Button
     private lateinit var mTriggerButton: Button
-    private lateinit var mItemRunnable: ItemRunnable
-
-    companion object {
-
-        private const val KEY_EXECUTOR = "argument.executor"
-
-        @JvmStatic
-        fun newInstance(clazz: Class<ItemRunnable>): ItemFragment {
-            val itemFragment = ItemFragment()
-            val arguments = Bundle()
-            arguments.putSerializable(KEY_EXECUTOR, clazz)
-            itemFragment.arguments = arguments
-            return itemFragment
-        }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val args = arguments
-        if (args != null) {
-            val clazz = args.getSerializable(KEY_EXECUTOR) as Class<*>
-            if (ItemRunnable::class.java.isAssignableFrom(clazz)) {
-                mItemRunnable = clazz.newInstance() as ItemRunnable
-            }
-        }
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_item, container, false)
