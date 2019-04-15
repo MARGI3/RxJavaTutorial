@@ -32,6 +32,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:${retrofitVer}"
     implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxjavaAdapterVer}"
     implementation "com.squareup.retrofit2:converter-gson:${gsonVer}"
+    api "com.jakewharton.rxbinding3:rxbinding:${rxbindingVer}"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
     implementation "com.android.support:appcompat-v7:${supportLibVer}"

@@ -3,9 +3,15 @@ package com.rxjava.practice.intentcreator
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.rxjava.practice.ItemRunnable
+import io.reactivex.disposables.CompositeDisposable
 
 open class BaseItemFragment : Fragment() {
 
+    companion object {
+        const val TAG = "RxJavaTutorial"
+    }
+
+    private var mCompositeDisposable: CompositeDisposable? = null
     protected lateinit var mItemRunnable: ItemRunnable
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,5 +23,21 @@ open class BaseItemFragment : Fragment() {
                 mItemRunnable = clazz.newInstance() as ItemRunnable
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        clearDisposable()
+    }
+
+    protected fun addDisposable(disposable: CompositeDisposable) {
+        if (mCompositeDisposable == null) {
+            mCompositeDisposable = CompositeDisposable()
+        }
+        mCompositeDisposable?.add(disposable)
+    }
+
+    protected fun clearDisposable() {
+        mCompositeDisposable?.clear()
     }
 }
