@@ -33,12 +33,12 @@ class PracticeListActivity : AppCompatActivity() {
 
     private fun buildList(): List<ItemModel> {
         mModelList = arrayListOf()
-        mModelList.add(ItemModel(R.string.item_network_polling_request, Demo1_Polling::class.java))
-        mModelList.add(ItemModel(R.string.item_network_failed_retry, Demo2_FailedRetry::class.java))
-        mModelList.add(ItemModel(R.string.item_nesting_request, Demo3_NestingRequest::class.java))
-        mModelList.add(ItemModel(R.string.item_cache, Demo4_Cache::class.java))
-        mModelList.add(ItemModel(R.string.item_merge_request, Demo5_MergeRequest::class.java))
-        mModelList.add(ItemModel(R.string.item_zip_request, Demo6_ZipRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_network_polling_request, Demo1Polling::class.java))
+        mModelList.add(ItemModel(R.string.item_network_failed_retry, Demo2FailedRetry::class.java))
+        mModelList.add(ItemModel(R.string.item_nesting_request, Demo3NestingRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_cache, Demo4Cache::class.java))
+        mModelList.add(ItemModel(R.string.item_merge_request, Demo5MergeRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_zip_request, Demo6ZipRequest::class.java))
         return mModelList
     }
 
