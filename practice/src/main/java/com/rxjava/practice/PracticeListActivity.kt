@@ -8,8 +8,10 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.rxjava.practice.demo.*
-import com.rxjava.practice.demo.demo7.Demo7EventBlock
-import com.rxjava.practice.demo.demo7.EventBlockIntentCreator
+import com.rxjava.practice.demo.demo7.EventThrottle
+import com.rxjava.practice.demo.demo7.EventThrottleIntentCreator
+import com.rxjava.practice.demo.demo8.EventDebounce
+import com.rxjava.practice.demo.demo8.EventDebounceIntentCreator
 
 class PracticeListActivity : AppCompatActivity() {
 
@@ -41,7 +43,8 @@ class PracticeListActivity : AppCompatActivity() {
         mModelList.add(ItemModel(R.string.item_cache, Demo4Cache::class.java))
         mModelList.add(ItemModel(R.string.item_merge_request, Demo5MergeRequest::class.java))
         mModelList.add(ItemModel(R.string.item_zip_request, Demo6ZipRequest::class.java))
-        mModelList.add(ItemModel(R.string.item_zip_request, Demo7EventBlock::class.java, EventBlockIntentCreator()))
+        mModelList.add(ItemModel(R.string.item_event_throttle, EventThrottle::class.java, EventThrottleIntentCreator()))
+        mModelList.add(ItemModel(R.string.item_event_debounce, EventDebounce::class.java, EventDebounceIntentCreator()))
         return mModelList
     }
 

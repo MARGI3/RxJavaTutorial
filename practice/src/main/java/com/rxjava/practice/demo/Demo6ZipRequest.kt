@@ -20,8 +20,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class Demo6ZipRequest : ItemRunnable(), Cancelable {
 
-    private val mBaseUrl = "http://fy.iciba.com/"
-
     private var mCompositeDisposable = CompositeDisposable()
 
     @SuppressLint("CheckResult")
@@ -30,7 +28,7 @@ class Demo6ZipRequest : ItemRunnable(), Cancelable {
         super.run()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl(mBaseUrl)
+            .baseUrl(TranslateService.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()

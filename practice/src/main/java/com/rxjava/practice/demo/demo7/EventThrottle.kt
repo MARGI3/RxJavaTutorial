@@ -19,9 +19,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
- * {@link com.rxjava.practice.demo.demo7.EventBlockFragment}
+ * {@link com.rxjava.practice.demo.demo7.EventThrottleFragment}
  */
-class Demo7EventBlock : ItemRunnable(), Cancelable {
+class EventThrottle : ItemRunnable(), Cancelable {
 
     private var mCompositeDisposable = CompositeDisposable()
 

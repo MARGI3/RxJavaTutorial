@@ -13,12 +13,12 @@ import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import java.util.concurrent.TimeUnit
 
-class EventBlockFragment : BaseItemFragment() {
+internal class EventThrottleFragment : BaseItemFragment() {
 
     private lateinit var mButton: Button
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_item_event_block, container, false)
+        return inflater.inflate(R.layout.fragment_item_event_throttle, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -26,14 +26,15 @@ class EventBlockFragment : BaseItemFragment() {
         mButton = view.findViewById(R.id.execute)
 
         /**
-         * 1. 此处采用了RxBinding
-         * 2. 传入Button控件，点击时，都会发送数据事件（但由于使用了throttleFirst（）操作符，所以只会发送该段时间内的第1次点击事件）
+         * 1. RxBinding
+         * 2. Button click will send event
          **/
         mButton.clicks()
-            .throttleFirst(2, TimeUnit.SECONDS)
+            .throttleFirst(2, TimeUnit.SECONDS) //second click event will send after 2s first event be sent
             .subscribe(object : Observer<Unit> {
 
                 override fun onSubscribe(d: Disposable) {
+                    addDisposable(d)
                     Log.d(TAG, "onSubscribe")
                 }
 

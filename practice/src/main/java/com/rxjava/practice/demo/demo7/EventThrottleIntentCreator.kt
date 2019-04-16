@@ -7,13 +7,13 @@ import com.rxjava.practice.ItemRunnable
 import com.rxjava.practice.intentcreator.FragmentWrapperActivity
 import com.rxjava.practice.intentcreator.IntentCreator
 
-class EventBlockIntentCreator : IntentCreator {
+class EventThrottleIntentCreator : IntentCreator {
 
     override fun createIntent(context: Context, clazz: Class<out ItemRunnable>, title: Int): Intent {
         val bundle = Bundle()
         bundle.putSerializable(IntentCreator.KEY_EXTRA_EXECUTOR, clazz)
         bundle.putInt(IntentCreator.KEY_EXTRA_TITLE, title)
-        return FragmentWrapperActivity.createIntent(context, EventBlockFragment::class.java, bundle)
+        return FragmentWrapperActivity.createIntent(context, EventThrottleFragment::class.java, bundle)
     }
 
 }

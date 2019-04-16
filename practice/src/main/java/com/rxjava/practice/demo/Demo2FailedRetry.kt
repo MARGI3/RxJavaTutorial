@@ -24,8 +24,6 @@ private const val RETRY_INTERVAL = 1L
 
 class Demo2FailedRetry : ItemRunnable(), Cancelable {
 
-    private val mBaseUrl = "http://fy.iciba.com/"
-
     private var mCompositeDisposable = CompositeDisposable()
 
     private var mRetryInterval = 0L
@@ -37,7 +35,7 @@ class Demo2FailedRetry : ItemRunnable(), Cancelable {
         super.run()
 
         val retrofit = Retrofit.Builder()
-                .baseUrl(mBaseUrl)
+                .baseUrl(TranslateService.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()

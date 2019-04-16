@@ -23,8 +23,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class Demo3NestingRequest : ItemRunnable(), Cancelable {
 
-    private val mBaseUrl = "http://fy.iciba.com/"
-
     private var mCompositeDisposable = CompositeDisposable()
 
     @SuppressLint("CheckResult")
@@ -33,7 +31,7 @@ class Demo3NestingRequest : ItemRunnable(), Cancelable {
         super.run()
 
         val retrofit = Retrofit.Builder()
-                .baseUrl(mBaseUrl)
+                .baseUrl(TranslateService.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()

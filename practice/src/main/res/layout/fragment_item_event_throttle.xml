@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".PracticeListActivity">
 
+    <TextView
+        android:text="@string/text_event_throttle_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/execute"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
     <Button
         android:id="@+id/execute"
         android:layout_width="wrap_content"

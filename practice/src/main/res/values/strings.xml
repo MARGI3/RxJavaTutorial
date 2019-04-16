@@ -3,6 +3,8 @@
 
     <string name="button_run">Run</string>
     <string name="button_trigger">Trigger</string>
+    <string name="text_event_throttle_tips">Click Button multiple times quickly</string>
+    <string name="edit_text_search_input">Search Key Work</string>
 
     <string name="item_network_polling_request">Polling Request</string>
     <string name="item_network_failed_retry">Failed Retry</string>
@@ -10,5 +12,6 @@
     <string name="item_cache">Cache</string>
     <string name="item_merge_request">Merge Request</string>
     <string name="item_zip_request">Zip Request</string>
-    <string name="item_event_block">Event Block</string>
+    <string name="item_event_throttle">Event Throttle</string>
+    <string name="item_event_debounce">Event Debounce</string>
 </resources>

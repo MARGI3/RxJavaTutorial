@@ -19,8 +19,6 @@ import java.util.concurrent.TimeUnit
 
 class Demo1Polling : ItemRunnable(), Cancelable {
 
-    private val mBaseUrl = "http://fy.iciba.com/"
-
     private var mCompositeDisposable = CompositeDisposable()
 
     @Suppress("ObjectLiteralToLambda")
@@ -34,7 +32,7 @@ class Demo1Polling : ItemRunnable(), Cancelable {
                     Log.d(TAG, "this is No.$t polling request")
 
                     val retrofit = Retrofit.Builder()
-                        .baseUrl(mBaseUrl)
+                        .baseUrl(TranslateService.BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
                         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                         .build()

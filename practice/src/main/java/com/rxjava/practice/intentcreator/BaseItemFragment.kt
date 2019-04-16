@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.rxjava.practice.ItemRunnable
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 
 open class BaseItemFragment : Fragment() {
 
@@ -30,13 +31,14 @@ open class BaseItemFragment : Fragment() {
         clearDisposable()
     }
 
-    protected fun addDisposable(disposable: CompositeDisposable) {
+    protected fun addDisposable(disposable: Disposable) {
         if (mCompositeDisposable == null) {
             mCompositeDisposable = CompositeDisposable()
         }
         mCompositeDisposable?.add(disposable)
     }
 
+    @Suppress("MemberVisibilityCanBePrivate")
     protected fun clearDisposable() {
         mCompositeDisposable?.clear()
     }
