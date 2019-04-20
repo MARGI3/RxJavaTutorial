@@ -37,4 +37,5 @@ ext {
     retrofitVer = '2.1.0'
     retrofitRxjavaAdapterVer = '1.0.0'
     gsonVer = '2.1.0'
+    rxbindingVer = '3.0.0-alpha2'
 }

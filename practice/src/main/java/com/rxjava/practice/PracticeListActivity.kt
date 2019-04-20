@@ -8,6 +8,10 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.rxjava.practice.demo.*
+import com.rxjava.practice.demo.demo7.EventThrottle
+import com.rxjava.practice.demo.demo7.EventThrottleIntentCreator
+import com.rxjava.practice.demo.demo8.EventDebounce
+import com.rxjava.practice.demo.demo8.EventDebounceIntentCreator
 
 class PracticeListActivity : AppCompatActivity() {
 
@@ -33,12 +37,14 @@ class PracticeListActivity : AppCompatActivity() {
 
     private fun buildList(): List<ItemModel> {
         mModelList = arrayListOf()
-        mModelList.add(ItemModel(R.string.item_network_polling_request, Demo1_Polling::class.java))
-        mModelList.add(ItemModel(R.string.item_network_failed_retry, Demo2_FailedRetry::class.java))
-        mModelList.add(ItemModel(R.string.item_nesting_request, Demo3_NestingRequest::class.java))
-        mModelList.add(ItemModel(R.string.item_cache, Demo4_Cache::class.java))
-        mModelList.add(ItemModel(R.string.item_merge_request, Demo5_MergeRequest::class.java))
-        mModelList.add(ItemModel(R.string.item_zip_request, Demo6_ZipRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_network_polling_request, Demo1Polling::class.java))
+        mModelList.add(ItemModel(R.string.item_network_failed_retry, Demo2FailedRetry::class.java))
+        mModelList.add(ItemModel(R.string.item_nesting_request, Demo3NestingRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_cache, Demo4Cache::class.java))
+        mModelList.add(ItemModel(R.string.item_merge_request, Demo5MergeRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_zip_request, Demo6ZipRequest::class.java))
+        mModelList.add(ItemModel(R.string.item_event_throttle, EventThrottle::class.java, EventThrottleIntentCreator()))
+        mModelList.add(ItemModel(R.string.item_event_debounce, EventDebounce::class.java, EventDebounceIntentCreator()))
         return mModelList
     }
 
