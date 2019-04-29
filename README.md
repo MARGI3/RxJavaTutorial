@@ -1,5 +1,9 @@
 This is `RxJava` tutorial based on `RxJava2`
 
+`RxJava` Anatomy, how `RxJava` is designed
+
+   [Reference](https://blog.mindorks.com/rxjava-anatomy-what-is-rxjava-how-rxjava-is-designed-and-how-rxjava-works-d357b3aca586)
+
 Module `operator` and Module `practice`
 
 ### `operator` module
